@@ -1,0 +1,13 @@
+/* Fichier permettant de neutraliser tous les styles par défaut des navigateurs */
+
+* {
+    padding: 0px;
+    margin: 0px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    box-sizing: border-box;
+    /*  Inclusion bordure/padding dans la taille totale */
+    text-decoration: none;
+    border: none;
+    overflow-x: hidden;
+    max-width: 100%;  
+}

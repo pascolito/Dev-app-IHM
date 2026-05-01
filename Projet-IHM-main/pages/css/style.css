@@ -1,19 +1,4 @@
-* {
-    padding: 0px;
-    margin: 0px;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    box-sizing: border-box;
-    /*  Inclusion bordure/padding dans la taille totale */
-    text-decoration: none;
-    border: none;
-    overflow-x: hidden;
-    max-width: 100%;  
-}
 
-:root {
-    --blanc--: white;
-    --noir--:black;
-}
 
 .body {
     background-color: var(--blanc--);
