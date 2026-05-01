@@ -1,0 +1,150 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    box-sizing: border-box;
+    /*  Inclusion bordure/padding dans la taille totale */
+    text-decoration: none;
+    border: none;
+    overflow-x: hidden;
+    max-width: 100%;  
+}
+
+:root {
+    --blanc--: white;
+    --noir--:black;
+}
+
+.body {
+    background-color: var(--blanc--);
+    display: flex;
+    flex-direction: row;
+}
+
+.page_accueil {
+    display: flex;
+    align-items: stretch;
+    height: calc(100vh - 100px); /* ajuste selon la hauteur du footer */
+
+}
+/* ------------------Première partie de la page d'accueil------------------*/
+.gauche {
+    flex: 1.4;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.gauche img {
+    width: 200px;
+    height: auto;
+}
+.gauche_presentation {
+    display: flex;
+    justify-content: center; 
+    align-items: center;     
+   padding-left: 150px;
+}
+.gauche #presentation_reseau_social {
+    font-size: 20px;
+    padding-top:150px;
+    margin: 20px;
+    text-align:center;
+}
+/* ------------------Barre veertical et horizontal------------------*/
+.milieu {
+    width: 2px;
+    background-color:var(--noir--);
+    height: 80%;
+    margin: auto 0;
+}
+
+/* ------------------Dernière partie de la page d'accueil------------------*/
+
+.droite {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+h1 {
+    font-size: 45px;
+    margin-top: 60px;
+    margin-bottom: 200px;
+}
+
+#connexion,
+#creation_compte {
+    display: flex;
+    background-color: var(--noir--);
+    font-style: italic;
+    font-size: 15px;
+    border-radius: 17px;
+    color: var(--blanc--);
+    width: auto;
+    padding: 12px 22px;
+    margin: 12px auto;
+    cursor: pointer;
+}
+
+/* ------------------Création de compte + connexion----------------------- */
+.formulaire {
+    width: 100%;
+    text-align: center;
+}
+
+.formulaire form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin: 0 auto;
+}
+
+input[type="file"] {
+    display: none;
+}
+
+.champ {
+    width: 45%;
+    padding: 12px;
+    margin: 10px 0;
+    box-sizing: border-box;
+    border: 2px solid #ececec;
+    border-radius: 10px;
+    background-color: #f3f3f3;
+}
+.champ:focus {
+    border: 2px solid black;
+    outline: none; /* enlève le contour bleu par défaut */
+}
+#pdplabel {
+    cursor: pointer;
+    text-align: left;
+    font-size: 80%;
+    color: #707070;
+}
+
+#top_inscription {
+    margin-left: 25%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+#preview_pdp{
+    width: 50%;
+}
+
+#right_inscr {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: left;
+}
+
+
+/* ------------------File d'actualité----------------------- */
