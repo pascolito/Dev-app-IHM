@@ -61,19 +61,7 @@ h1 {
     margin-bottom: 200px;
 }
 
-#connexion,
-#creation_compte {
-    display: flex;
-    background-color: var(--noir--);
-    font-style: italic;
-    font-size: 15px;
-    border-radius: 17px;
-    color: var(--blanc--);
-    width: auto;
-    padding: 12px 22px;
-    margin: 12px auto;
-    cursor: pointer;
-}
+
 
 /* ------------------Création de compte + connexion----------------------- */
 .formulaire {
