@@ -13,62 +13,82 @@
 
 <body>
 
-    <div class="page_actualité">
+    <div class="page_actualite">
 
         <!--Partie gauche de la page -->
-        <div class="extrémité">
+        <div class="extremite">
 
             <div class="quete">
                 <h3>Quêtes du jour</h3>
 
-                <li>Liker un post</li>
-                <li>Publier une image</li>
-                <li>Commentez la publication d'un autre utilisateur</li>
+                <div class="stat-item">
+                    <i class="ti ti-heart"></i>
+                    <span class="stat-label">Liker un post</span>
+                    <span class="stat-value">4.2k</span>
+                </div>
+                <div class="stat-item">
+                    <i class="ti ti-users"></i>
+                    <span class="stat-label">Publier une image</span>
+                    <span class="stat-value">1.8k</span>
 
+                </div>
+                <div class="stat-item">
+                    <i class="ti ti-user-plus"></i>
+                    <span class="stat-label">Commentez la publication d'un autre utilisateur</span>
+                    <span class="stat-value">342</span>
+                </div>
             </div>
+
 
 
             <div class="statistiques">
-                <h3>Statistiques</h3>
-                <div id="likes">
-                    <li>Likes</li>
+                <div class="stat-item">
+                    <i class="ti ti-heart"></i>
+                    <span class="stat-label">Likes</span>
+                    <span class="stat-value">4.2k</span>
                 </div>
-                <div id="nb_abonnee">
-                    <li>Abonnés</li>
+                <div class="stat-item">
+                    <i class="ti ti-users"></i>
+                    <span class="stat-label">Abonnés</span>
+                    <span class="stat-value">1.8k</span>
                 </div>
-                <div id="nb_suivis">
-                    <li>Folowers</li>
+                <div class="stat-item">
+                    <i class="ti ti-user-plus"></i>
+                    <span class="stat-label">Suivis</span>
+                    <span class="stat-value">342</span>
+                    
                 </div>
             </div>
-
         </div>
 
-        <!--Partie mileu de la page -->
-        <div class="actualite_principal">
+    </div>
 
+    <!--Partie mileu de la page -->
+    <div class="actualite_principal">
+        <div class=""></div>
+    </div>
+
+
+    <!--Partie droite de la page -->
+    <div class="extremite">
+        <h3>Utilisateurs</h3>
+
+        <div class="barre_recherche_utilisateur">
+            dz
+        </div>
+        <div class="utilisateur">
+            <div class="nouvelle_utilisateur"></div>
         </div>
 
-
-        <!--Partie droite de la page -->
-        <div class="extrémité">
-            <h3>Utilisateurs</h3>
-
-            <div class="barre_recherche_utilisateur">
-                dz
-            </div>
-            <div class="utilisateur">
-                <div class="nouvelle_utilisateur"></div>
-            </div>
-
-        </div>
+    </div>
     </div>
     <script>
         fetch('/Projet-IHM-main/pages/html/footer.html')
-          .then(response => response.text())
-          .then(data => {
-            document.getElementById('footer').innerHTML = data;
-          });
-        </script>
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('footer').innerHTML = data;
+            });
+    </script>
 </body>
 
 </html>

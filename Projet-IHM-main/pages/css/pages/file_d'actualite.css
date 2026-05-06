@@ -1,0 +1,50 @@
+.extremite{
+    width: 25%;
+    
+}
+/* Statistiques */
+.statistiques,.quete {
+    display: flex;
+    flex-direction: column; /* ← colonne au lieu de ligne */
+    gap: 1px;
+    border: 0.5px solid #e0e0e0;
+    border-radius:var(--space-4);
+    overflow: hidden;
+    background: #e0e0e0;
+  }
+  
+  .stat-item {
+    flex: 1;
+    background: #ffffff;
+    padding: 1rem 1.25rem;
+    
+    flex-direction: row-reverse; 
+    align-items: center;
+    text-align: center;
+    gap: var(--space-4);
+  }
+  
+  .stat-item i {
+    font-size: 20px;
+    width: 24px;
+
+    text-align: center;
+  }
+  
+  .stat-item:nth-child(1) i { color: #E24B4A; }
+  .stat-item:nth-child(2) i { color: #378ADD; }
+  .stat-item:nth-child(3) i { color: #639922; }
+  
+  .stat-value {
+    font-size: 18px;
+    font-weight: 500;
+    color: #1a1a1a;
+    min-width: 48px;
+  }
+  
+  .stat-label {
+    font-size: 13px;
+    color: #888;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
