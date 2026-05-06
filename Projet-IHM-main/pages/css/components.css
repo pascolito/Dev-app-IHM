@@ -2,17 +2,45 @@
 
 .btn {
     display: flex;
-    background-color: var(--noir--);
+    background-color: var(--noir);
     font-style: italic;
     font-size: 15px;
-    border-radius: 17px;
-    color: var(--blanc--);
+    border-radius: var(--space-3);
+    color: var(--blanc);
     width: auto;
-    padding: 12px 22px;
-    margin: 12px auto;
-    cursor: pointer;
-}
 
+    padding: 0.5rem 1.1rem;  
+      margin: var(--space-3) auto;
+    cursor: pointer;
+
+  font-weight: 500;
+  border: 1.5px solid var(--noir);
+  color: var(--blanc);
+  white-space: nowrap;
+  align-self: center;
+}
+.btn:hover{
+    background: #fff;
+  color: #1a1a1a ;
+}
+.btn_suivre,
+.btn_supprimer {
+  padding: 0.5rem 1.1rem;
+  border-radius: var(--space-3);
+  font-size: 15px;
+  font-weight: 500;
+  cursor: pointer;
+  background: transparent;
+  border: 1.5px solid #1a1a1a;
+  color: var(--noir);
+  white-space: nowrap;
+  align-self: flex-start;
+}
+.btn_suivre:hover,
+.btn_supprimer:hover {
+  background: #1a1a1a;
+  color: #fff;
+}
 
 /* ------------------Création de compte + connexion----------------------- */
 .formulaire {
@@ -34,11 +62,11 @@ input[type="file"] {
 
 .champ {
     width: 45%;
-    padding: 12px;
-    margin: 10px 0;
+    padding: var(--space-3);
+    margin: var(--space-3) 0;
     box-sizing: border-box;
-    border: 2px solid #ececec;
-    border-radius: 10px;
+    border: 2px solid var(--blanc);
+    border-radius: var(--space-3);
     background-color: #f3f3f3;
 }
 .champ:focus {

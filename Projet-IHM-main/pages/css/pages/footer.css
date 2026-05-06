@@ -7,8 +7,8 @@
     border: none;
 }
 .footer {
-    background: #111;
-    color: white;
+    background: var(--noir);
+    color: var(--blanc);
     text-align: center;
     padding: 10px 15px;
 }
@@ -32,7 +32,7 @@
 }
 
 .footer_liens a {
-    color: white;
+    color:var(--blanc);
     text-decoration: none;
     font-size: 14px;
 }

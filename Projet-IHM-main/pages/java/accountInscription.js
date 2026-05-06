@@ -1,8 +1,6 @@
 // 1) Rcupration des champs du formulaire
 
 const erreur = document.getElementById("erreur");
-//formulaire connexion
-const form_connexion = document.getElementById("form-connexion");
 //formulaire inscription
 const form_inscription = document.getElementById("form-inscription");
 
@@ -57,7 +55,7 @@ form_inscription.addEventListener("submit", function (event) {
     }
     //verifier si le compte n'existe pas déja  :
     for (let i = 0; i < comptes.length; i++) {
-        if(mail === comptes[i].mail){
+        if (mail === comptes[i].mail) {
             erreur.textContent = "L'adresse email est déja utilisé !";
             console.log("L'adresse email est déja utilisé !")
             return;
@@ -79,7 +77,7 @@ form_inscription.addEventListener("submit", function (event) {
 });
 
 function chargerComptes() {
-    const data = localStorage.getItem("comptes");
+    const data = localStorage.getItem("account");
     if (data !== null) {
         comptes = JSON.parse(data);
     }
@@ -87,7 +85,7 @@ function chargerComptes() {
 
 function sauvegarderComptes() {
     localStorage.setItem(
-        "comptes",
+        "account",
         JSON.stringify(comptes)
     );
 }

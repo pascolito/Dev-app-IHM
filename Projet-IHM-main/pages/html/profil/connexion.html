@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Connexion</title>
-    
+
     <link rel="stylesheet" href="/Projet-IHM-main/pages/css/reset.css">
     <link rel="stylesheet" href="/Projet-IHM-main/pages/css/variables.css">
     <link rel="stylesheet" href="/Projet-IHM-main/pages/css/components.css">
@@ -13,34 +13,34 @@
 </head>
 
 <body>
- 
+
 
     <div class="page_accueil">
 
         <div class="gauche">
-            <div class="gauche_logo"> 
+            <div class="gauche_logo">
                 <img src="/Projet-IHM-main/images/logo.png" alt="logo">
-                
+
             </div>
             <div class="gauche_presentation">
                 <div id="presentation_reseau_social">
-                    <p>Enfin un réseau où tu n’es pas juste un <br/> pouce qui like 👍</p>
+                    <p>Enfin un réseau où tu n’es pas juste un <br /> pouce qui like 👍</p>
                 </div>
             </div>
 
         </div>
 
         <div class="milieu">
-            <span > <!--Délimmitation de la page /milieu --></span>
+            <span class="barre_vertical"> <!--Délimmitation de la page /milieu --></span>
         </div>
         <div class="droite"> <!--Partie drotie de la page -->
             <div class="formulaire">
                 <h1>Ravis de vous revoir !</h1>
-                <form>
+                <form id="form-connexion">
 
                     <input class="champ" id="mail" type="text" placeholder="Email">
                     <input class="champ" id="mot_de_passe" type="text" placeholder="Mot de passe">
-                    <button class="btn" id=connexion type="button">
+                    <button class="btn" id=connexion type="submit">
                         Se Connecter
                     </button>
                 </form>
@@ -51,11 +51,13 @@
     <div id="footer"></div>
     <script>
         fetch('/Projet-IHM-main/pages/html/footer.html')
-          .then(response => response.text())
-          .then(data => {
-            document.getElementById('footer').innerHTML = data;
-          });
-        </script>
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('footer').innerHTML = data;
+            });
+    </script>
+    <script src="/Projet-IHM-main/pages/java/accountLogin.js"></script>
+
 </body>
 
 </html>

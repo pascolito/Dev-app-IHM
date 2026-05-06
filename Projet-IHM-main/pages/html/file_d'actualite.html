@@ -22,38 +22,33 @@
                 <h3>Quêtes du jour</h3>
 
                 <div class="stat-item">
-                    <i class="ti ti-heart"></i>
                     <span class="stat-label">Liker un post</span>
                     <span class="stat-value">4.2k</span>
                 </div>
                 <div class="stat-item">
-                    <i class="ti ti-users"></i>
                     <span class="stat-label">Publier une image</span>
                     <span class="stat-value">1.8k</span>
 
                 </div>
                 <div class="stat-item">
-                    <i class="ti ti-user-plus"></i>
                     <span class="stat-label">Commentez la publication d'un autre utilisateur</span>
                     <span class="stat-value">342</span>
                 </div>
             </div>
 
-
+            
 
             <div class="statistiques">
+                <h3>Statistiques</h3>
                 <div class="stat-item">
-                    <i class="ti ti-heart"></i>
                     <span class="stat-label">Likes</span>
                     <span class="stat-value">4.2k</span>
                 </div>
                 <div class="stat-item">
-                    <i class="ti ti-users"></i>
                     <span class="stat-label">Abonnés</span>
                     <span class="stat-value">1.8k</span>
                 </div>
                 <div class="stat-item">
-                    <i class="ti ti-user-plus"></i>
                     <span class="stat-label">Suivis</span>
                     <span class="stat-value">342</span>
                     
@@ -61,12 +56,54 @@
             </div>
         </div>
 
-    </div>
+    
 
     <!--Partie mileu de la page -->
-    <div class="actualite_principal">
-        <div class=""></div>
-    </div>
+    <div class="actualite_principale">
+
+        <!-- Onglets -->
+        <div class="onglets">
+          <button class="btn" onclick="window.location.href='#';"> Pour toi</button>
+          <button class="btn" onclick="window.location.href='#';">Suivis</button>
+        </div>
+      
+
+        <!-- Créer un post -->
+        <div class="carte">
+          <p class="carte_tag">#Faire un poste</p>
+          <div class="carte_contenu">
+            <div class="avatar">🙂</div>
+            <div class="carte_texte">
+              <p class="carte_question">Quoi de neuf ? / Une idée ? / Qu'avez vous a nous raconter ?</p>
+              <p class="carte_tag">faire un système de message aléatoire</p>
+              <div class="carte_actions">
+                <span class="icone_media">🖼️</span>
+                <span class="icone_media">🖼️</span>
+                <span class="carte_tag">#ajouter image ou gif</span>
+              </div>
+            </div>
+            <button class="btn_suivre">Suivre</button>
+          </div>
+        </div>
+      
+        <!-- Post existant -->
+        <div class="carte">
+          <p class="carte_tag">#Les autres postes</p>
+          <div class="carte_contenu">
+            <div class="avatar">🙂</div>
+            <div class="carte_texte">
+              <p class="carte_auteur">nom prenom + Date de publication</p>
+              <p>Texte publié par l'utilisateur si il ecrit qql chose</p>
+              <div class="carte_image"></div>
+            </div>
+          </div>
+          <div class="carte_footer">
+            <span class="like">❤️</span>
+            <button class="btn_supprimer">Supprimer</button>
+          </div>
+        </div>
+      
+      </div>
 
 
     <!--Partie droite de la page -->
@@ -82,6 +119,7 @@
 
     </div>
     </div>
+</div>
     <script>
         fetch('/Projet-IHM-main/pages/html/footer.html')
             .then(response => response.text())

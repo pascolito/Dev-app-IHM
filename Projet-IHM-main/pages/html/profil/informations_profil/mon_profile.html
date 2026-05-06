@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="/Projet-IHM-main/pages/css/reset.css">
+  <link rel="stylesheet" href="/Projet-IHM-main/pages/css/variables.css">
+  <link rel="stylesheet" href="/Projet-IHM-main/pages/css/components.css">
+  <link rel="stylesheet" href="/Projet-IHM-main/pages/css/pages/profil/informations_profil/mes_informations.css">
+  <title>Document</title>
+</head>
+
+<body>
+
+  <div id="button_onglet">
+    
+    <button class="btn" id="onglet_information" type="submit">
+      Mes informations
+    </button>
+    
+    <button class="btn" id="onglet_statistique" type="submit">
+      Statistiques
+    </button>
+    
+    <button class="btn" id="modifier_publication" type="submit">
+      Mes publications
+    </button>
+  </div>
+
+
+  <div id="information">
+    <div class="formulaire">
+      <form id="form-modification">
+        <div id="top_inscription"><!--en haut de l'inscription  -->
+          <img id="preview_pdp" src="/Projet-IHM-main/images/profile_vide.png" alt="pdp">
+          <!--Preview de la photo de profile  -->
+
+          <div id="right_inscr"> <!--partie a droite de la preview -->
+            <input class="champ" id="nom" type="text" placeholder="Nom">
+
+            <input class="champ" id="prenom" type="text" placeholder="Prenom">
+
+            <label class="champ" id="pdplabel">
+              <input type="file" id="pdp" name="pdp" accept="image/png, image/jpeg">
+              Photo de profile
+            </label>
+          </div>
+        </div>
+
+        <!--en bas de l'inscription  -->
+        <input class="champ" id="mail" type="email" placeholder="Email">
+
+        <input class="champ" id="mot_de_passe" type="password" placeholder="Mot de passe">
+        <input class="champ" id="mot_de_passe_conf" type="password" placeholder="Confirmations du mot de passe">
+
+        <button class="btn" id="modifier_information" type="submit">
+          Modifier les information
+        </button>
+
+        <div id="erreur"></div>
+      </form>
+    </div>
+    <div id="publication">
+
+    </div>
+
+
+
+    <script>
+      fetch('/Projet-IHM-main/pages/html/footer.html')
+        .then(response => response.text())
+        .then(data => {
+          document.getElementById('footer').innerHTML = data;
+        });
+    </script>
+</body>
+
+</html>

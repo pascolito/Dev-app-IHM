@@ -1,5 +1,5 @@
 .body {
-    background-color: var(--blanc--);
+    background-color: var(--blanc);
     display: flex;
     flex-direction: row;
 }
@@ -38,7 +38,7 @@
 /* ------------------Barre veertical et horizontal------------------*/
 .milieu {
     width: 2px;
-    background-color:var(--noir--);
+    background-color:var(--noir );
     height: 80%;
     margin: auto 0;
 }

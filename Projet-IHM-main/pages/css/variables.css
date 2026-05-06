@@ -1,19 +1,33 @@
-:root {
-    --blanc--: white;
-    --noir--:black;
 
-    --color-border--:rgba(255, 255, 255, 0.08);
+:root {
+  --noir : black;
+  --blanc:white;
+
+
+  /* — Couleurs primaires — */
+  --color-primary:    #6B1A2B;
+  --color-primary-hover:    #8B2236;
+  --color-primary-light:    #B34A64;
+  --color-primary-muted:    #D4879A;
+  /* — Fonds & surfaces — */
+  --color-bg:    #0D0D0D;
+  --color-surface:    #1A1215;
+  --color-surface-raised:    #2C2025;
+  --color-border:    #3D2E32;
+  /* — Texte — */
+  --color-text:    #F5EEF0;
+  --color-text-muted:    #C2A8AF;
 }
 
 :root {
   /* Système en base 4px — couvre 95% des cas */
-  --space-1:  4px;
-  --space-2:  8px;
-  --space-3:  12px;
-  --space-4:  16px;
-  --space-5:  20px;
-  --space-6:  24px;
-  --space-8:  32px;
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 20px;
+  --space-6: 24px;
+  --space-8: 32px;
   --space-10: 40px;
   --space-12: 48px;
   --space-16: 64px;
