@@ -36,7 +36,7 @@
                 </div>
             </div>
 
-            
+
 
             <div class="statistiques">
                 <h3>Statistiques</h3>
@@ -51,75 +51,93 @@
                 <div class="stat-item">
                     <span class="stat-label">Suivis</span>
                     <span class="stat-value">342</span>
-                    
+
                 </div>
             </div>
         </div>
 
-    
 
-    <!--Partie mileu de la page -->
-    <div class="actualite_principale">
 
-        <!-- Onglets -->
-        <div class="onglets">
-          <button class="btn" onclick="window.location.href='#';"> Pour toi</button>
-          <button class="btn" onclick="window.location.href='#';">Suivis</button>
+        <!--Partie mileu de la page -->
+        <div class="actualite_principale">
+
+            <!-- Onglets -->
+            <div class="onglets">
+                <button class="btn" onclick="window.location.href='#';"> Pour toi</button>
+                <button class="btn" onclick="window.location.href='#';">Suivis</button>
+            </div>
+
+
+            <!-- Créer un post -->
+            <div class="carte">
+                <p class="carte_tag">#Faire un poste</p>
+                <div class="carte_contenu">
+                    <div class="avatar">🙂</div>
+                    <div class="carte_texte">
+                        <p class="carte_question">Quoi de neuf ? / Une idée ? / Qu'avez vous a nous raconter ?</p>
+                        <p class="carte_tag">faire un système de message aléatoire</p>
+                        <div class="carte_actions">
+                            <span class="icone_media">🖼️</span>
+                            <span class="icone_media">🖼️</span>
+                            <span class="carte_tag">#ajouter image ou gif</span>
+                        </div>
+                    </div>
+                    <button class="btn_suivre">Suivre</button>
+                </div>
+            </div>
+
+            <!-- Post existant -->
+            <div class="carte">
+                <p class="carte_tag">#Les autres postes</p>
+                <div class="carte_contenu">
+                    <div class="avatar">🙂</div>
+                    <div class="carte_texte">
+                        <p class="carte_auteur">nom prenom + Date de publication</p>
+                        <p>Texte publié par l'utilisateur si il ecrit qql chose</p>
+                        <div class="carte_image"></div>
+                    </div>
+                </div>
+                <div class="carte_footer">
+                    <span class="like">❤️</span>
+                    <button class="btn_supprimer">Supprimer</button>
+                </div>
+            </div>
+
         </div>
-      
 
-        <!-- Créer un post -->
-        <div class="carte">
-          <p class="carte_tag">#Faire un poste</p>
-          <div class="carte_contenu">
-            <div class="avatar">🙂</div>
-            <div class="carte_texte">
-              <p class="carte_question">Quoi de neuf ? / Une idée ? / Qu'avez vous a nous raconter ?</p>
-              <p class="carte_tag">faire un système de message aléatoire</p>
-              <div class="carte_actions">
-                <span class="icone_media">🖼️</span>
-                <span class="icone_media">🖼️</span>
-                <span class="carte_tag">#ajouter image ou gif</span>
+
+        <!--Partie droite de la page -->
+        <div class="extremite">
+        <div class="bloc-utilisateurs">
+            <h3 class="titre-section">Utilisateurs</h3>
+          
+            <p class="infos-utilisateurs">
+              Utilisateur trouvé : <span id="total-utilisateurs">0</span> 
+            </p>
+          
+            <div class="barre-recherche"></div>
+          
+            <div class="liste-utilisateurs">
+              <div class="carte-utilisateur nouveau-utilisateur"></div>
+            </div>
+          
+            <form id="form-etudiant" class="form-recherche">
+              <div class="champ-recherche">
+                <input
+                  list="liste-data"
+                  name="recherche"
+                  id="recherche"
+                  placeholder="Rechercher un utilisateur"
+                />
+                <datalist id="liste-data"></datalist>
               </div>
-            </div>
-            <button class="btn_suivre">Suivre</button>
+          
+              <ul id="liste-resultats" class="resultats-recherche"></ul>
+            </form>
           </div>
-        </div>
-      
-        <!-- Post existant -->
-        <div class="carte">
-          <p class="carte_tag">#Les autres postes</p>
-          <div class="carte_contenu">
-            <div class="avatar">🙂</div>
-            <div class="carte_texte">
-              <p class="carte_auteur">nom prenom + Date de publication</p>
-              <p>Texte publié par l'utilisateur si il ecrit qql chose</p>
-              <div class="carte_image"></div>
-            </div>
           </div>
-          <div class="carte_footer">
-            <span class="like">❤️</span>
-            <button class="btn_supprimer">Supprimer</button>
-          </div>
-        </div>
-      
-      </div>
-
-
-    <!--Partie droite de la page -->
-    <div class="extremite">
-        <h3>Utilisateurs</h3>
-
-        <div class="barre_recherche_utilisateur">
-            dz
-        </div>
-        <div class="utilisateur">
-            <div class="nouvelle_utilisateur"></div>
-        </div>
-
     </div>
-    </div>
-</div>
+    
     <script>
         fetch('/Projet-IHM-main/pages/html/footer.html')
             .then(response => response.text())

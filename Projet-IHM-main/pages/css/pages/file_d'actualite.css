@@ -8,8 +8,6 @@
     background-color: var(--color-texte);
   }
 
-
-
 .extremite {
     width: 25%;
     display: flex;        
@@ -73,7 +71,7 @@
     width: 100%;
   }
   
-  
+
   /* ───── ONGLETS ───── */
   
   .onglets {
@@ -192,4 +190,109 @@
   }
   
  
-  
+  /*-----------------------------------------partie gahce utilisateur ------------------------*/
+/* Bloc principal */
+.bloc-utilisateurs {
+  background-color: #f9f9fb;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 20px;
+  max-width: 500px;
+  margin: 30px auto;
+  font-family: "Segoe UI", Arial, sans-serif;
+}
+
+/* Titre */
+.titre-section {
+  font-size: 1.4rem;
+  color: #333;
+  margin-bottom: 10px;
+  border-bottom: 2px solid #0078d7;
+  display: inline-block;
+  padding-bottom: 5px;
+}
+
+/* Informations */
+.infos-utilisateurs {
+  font-size: 0.95rem;
+  color: #666;
+  margin-bottom: 15px;
+}
+
+/* Barre décorative ou séparateur */
+.barre-recherche {
+  height: 2px;
+  background: #0078d7;
+  width: 100%;
+  margin: 10px 0 20px 0;
+}
+
+/* Liste d’utilisateurs */
+.liste-utilisateurs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.carte-utilisateur {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 10px;
+  width: calc(50% - 10px);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.nouveau-utilisateur {
+  border: 2px dashed #0078d7;
+  text-align: center;
+  color: #0078d7;
+  font-weight: 500;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.nouveau-utilisateur:hover {
+  background-color: #eaf3ff;
+}
+
+/* Formulaire de recherche */
+.form-recherche {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.champ-recherche input {
+  width: 100%;
+  padding: 10px;
+  font-size: 1rem;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  transition: border-color 0.3s;
+}
+
+.champ-recherche input:focus {
+  outline: none;
+  border-color: #0078d7;
+}
+
+/* Liste de résultats */
+.resultats-recherche {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.resultats-recherche li {
+  padding: 8px 12px;
+  background: #fff;
+  border-bottom: 1px solid #eee;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.resultats-recherche li:hover {
+  background-color: #f0f7ff;
+}
