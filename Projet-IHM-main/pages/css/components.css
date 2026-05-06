@@ -12,3 +12,60 @@
     margin: 12px auto;
     cursor: pointer;
 }
+
+
+/* ------------------Création de compte + connexion----------------------- */
+.formulaire {
+    width: 100%;
+    text-align: center;
+}
+
+.formulaire form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin: 0 auto;
+}
+
+input[type="file"] {
+    display: none;
+}
+
+.champ {
+    width: 45%;
+    padding: 12px;
+    margin: 10px 0;
+    box-sizing: border-box;
+    border: 2px solid #ececec;
+    border-radius: 10px;
+    background-color: #f3f3f3;
+}
+.champ:focus {
+    border: 2px solid black;
+    outline: none; /* enlève le contour bleu par défaut */
+}
+#pdplabel {
+    cursor: pointer;
+    text-align: left;
+    font-size: 80%;
+    color: #707070;
+}
+
+#top_inscription {
+    margin-left: 25%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+#preview_pdp{
+    width: 50%;
+}
+
+#right_inscr {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: left;
+}
