@@ -1,16 +1,36 @@
 <link rel="stylesheet" href="/Projet-IHM-main/pages/css/reset.css">
 <link rel="stylesheet" href="/Projet-IHM-main/pages/css/variables.css">
 <link rel="stylesheet" href="/Projet-IHM-main/pages/css/components.css">
+<link rel="stylesheet" href="/Projet-IHM-main/pages/css/pages/file_d'actualite.css">
 <link rel="stylesheet" href="/Projet-IHM-main/pages/css/pages/header.css">
 <header class="header">
 
     <div class="header_contenue">
+
         <div class="header_logo">
             <img src="/Projet-IHM-main/images/logo.png" alt="logo">
         </div>
 
-        <input type="text" id="recherche" name="recherche" placeholder="rechercher">
+        <form id="form-post" class="form-recherche">
+            <div class="champ-recherche">
+                <input list="liste-data" name="recherche" id="recherche" placeholder="Rechercher un post" />
+                <datalist id="liste-data"></datalist>
+            </div>
+
+            <ul id="liste-resultats" class="resultats-recherche"></ul>
+        </form>
+
+
+        <!-- PLACEHOLDER USER A REMPLIR DANS LE CSS-->
+        <div class="header_user">
+            <img src="/Projet-IHM-main/images/profile_vide.png" alt="pdp" id="headerPdp">
+
+            <p id="nomprenom">nom prenom</p>
+
+            <button class="btn" id="DECONEXION" >DECONEXION</button>
+        </div>
 
     </div>
 
+    <script src="/Projet-IHM-main/pages/java/header.js"></script>
 </header>

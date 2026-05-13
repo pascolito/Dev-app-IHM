@@ -41,6 +41,7 @@ form_connexion.addEventListener("submit", function (event) {
                     "connectedAccount",
                     JSON.stringify(id)
                 );
+                window.location.href = "/Projet-IHM-main/pages/html/file_d'actualite.html";
                 erreur.textContent = "";
                 return;
             }

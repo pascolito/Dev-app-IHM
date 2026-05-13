@@ -3,21 +3,17 @@
   --noir : black;
   --blanc:white;
 
+  --color-primary: #6B1A2B;
 
-  /* — Couleurs primaires — */
-  --color-primary:    #6B1A2B;
-  --color-primary-hover:    #8B2236;
-  --color-primary-light:    #B34A64;
-  --color-primary-muted:    #D4879A;
-  /* — Fonds & surfaces — */
-  --color-bg:    #0D0D0D;
-  --color-surface:    #1A1215;
-  --color-surface-raised:    #2C2025;
-  --color-border:    #3D2E32;
-  /* — Texte — */
-  --color-text:    #F5EEF0;
-  --color-text-muted:    #C2A8AF;
-}
+  --color-bg: #F7F7F8;
+    --color-surface: #FFFFFF;
+    --color-surface-raised: #F2F2F3;
+  
+    --color-border: #E5E7EB;
+  
+    --color-text: #111827;
+    --color-text-muted: #6B7280;
+  }
 
 :root {
   /* Système en base 4px — couvre 95% des cas */

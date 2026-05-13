@@ -3,7 +3,7 @@
 .btn {
     display: flex;
     background-color: var(--noir);
-    font-style: italic;
+    font-style:normal;
     font-size: 15px;
     border-radius: var(--space-3);
     color: var(--blanc);
@@ -23,6 +23,7 @@
     background: #fff;
   color: #1a1a1a ;
 }
+
 .btn_suivre,
 .btn_supprimer {
   padding: 0.5rem 1.1rem;

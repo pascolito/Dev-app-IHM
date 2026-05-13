@@ -8,8 +8,42 @@
     <link rel="stylesheet" href="/Projet-IHM-main/pages/css/variables.css">
     <link rel="stylesheet" href="/Projet-IHM-main/pages/css/components.css">
     <link rel="stylesheet" href="/Projet-IHM-main/pages/css/pages/file_d'actualite.css">
+    <link rel="stylesheet" href="/Projet-IHM-main/pages/css/pages/header.css">
     <title>File d'actualité</title>
 </head>
+
+<header class="header">
+
+    <div class="header_contenue">
+
+        <div class="header_logo">
+            <img src="/Projet-IHM-main/images/logo.png" alt="logo">
+        </div>
+
+        <form id="form-post" class="form-recherche">
+            <div class="champ-recherche">
+                <input list="liste-data" name="recherche" id="recherche" placeholder="Rechercher un post" />
+                <datalist id="liste-data"></datalist>
+            </div>
+
+            <ul id="liste-resultats" class="resultats-recherche"></ul>
+        </form>
+
+
+        <!-- PLACEHOLDER USER A REMPLIR DANS LE CSS-->
+        <div class="header_user">
+            <img src="/Projet-IHM-main/images/profile_vide.png" alt="pdp" id="headerPdp">
+
+            <p id="nomprenom">nom prenom</p>
+
+            <button class="btn" id="DECONEXION">DECONEXION</button>
+        </div>
+
+    </div>
+
+    <script src="/Projet-IHM-main/pages/java/header.js"></script>
+</header>
+
 
 <body>
 
@@ -108,36 +142,36 @@
 
         <!--Partie droite de la page -->
         <div class="extremite">
-        <div class="bloc-utilisateurs">
-            <h3 class="titre-section">Utilisateurs</h3>
-          
-            <p class="infos-utilisateurs">
-              Utilisateur trouvé : <span id="total-utilisateurs">0</span> 
-            </p>
-          
-            <div class="barre-recherche"></div>
-          
-            <div class="liste-utilisateurs">
-              <div class="carte-utilisateur nouveau-utilisateur"></div>
+            <div class="bloc-utilisateurs">
+                <h3 class="titre-section">Utilisateurs</h3>
+
+                <p class="infos-utilisateurs">
+                    Utilisateur trouvé : <span id="total-utilisateurs">0</span>
+                </p>
+
+                <div class="barre-recherche"></div>
+
+                <form id="form-utilisateur" class="form-recherche">
+                    <div class="champ-recherche">
+                        <input name="recherche-utilisateur" id="recherche-utilisateur" type="text"
+                            placeholder="Rechercher un utilisateur" />
+
+                        <datalist id="liste-data"></datalist>
+                    </div>
+
+                    <ul id="liste-resultats" class="resultats-recherche">
+                        <li>Alexandre catien</li>
+                        <li>pascoliplot</li>
+                        <li>bruhhhhh</li>
+                    </ul>
+
+
+                </form>
             </div>
-          
-            <form id="form-etudiant" class="form-recherche">
-              <div class="champ-recherche">
-                <input
-                  list="liste-data"
-                  name="recherche"
-                  id="recherche"
-                  placeholder="Rechercher un utilisateur"
-                />
-                <datalist id="liste-data"></datalist>
-              </div>
-          
-              <ul id="liste-resultats" class="resultats-recherche"></ul>
-            </form>
-          </div>
-          </div>
+        </div>
     </div>
-    
+    <script src="/Projet-IHM-main/pages/java/barre_de_recherche/recherche_utilisateur.js"></script>
+
     <script>
         fetch('/Projet-IHM-main/pages/html/footer.html')
             .then(response => response.text())

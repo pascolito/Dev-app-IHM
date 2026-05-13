@@ -33,11 +33,11 @@
 .gauche #presentation_reseau_social {
     font-size: 20px;
     padding-top:150px;
-    margin: 20px;
+    margin: 20px; 
     text-align:center;
 }
-/* ------------------Barre veertical et horizontal------------------*/
-.barre_vertical {
+/* ------------------Barre vertical et horizontal------------------*/
+.milieu {
     width: 2px;
     background-color:var(--noir);
     height: 80%;
