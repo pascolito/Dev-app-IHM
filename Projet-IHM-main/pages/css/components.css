@@ -38,6 +38,12 @@
   align-self: flex-start;
 }
 
+.btn_suivre:hover,
+.btn_supprimer:hover {
+  background: #1a1a1a;
+  color: #fff;
+}
+
 .btn_suivre_petit,
 .btn_supprimer_petit {
   padding: 0.25rem 0.55rem;
@@ -58,6 +64,23 @@
   color: #fff;
 }
 
+
+.btn_poster {
+  padding: 0.5rem 1.1rem;
+  border-radius: var(--space-3);
+  font-size: 15px;
+  font-weight: 500;
+  cursor: pointer;
+  background: transparent;
+  border: 1.5px solid #1a1a1a;
+  color: var(--noir);
+  white-space: nowrap;
+  align-self: flex-start;
+}
+.btn_poster:hover{
+  background: #1a1a1a;
+  color: #fff;
+}
 /* ------------------Création de compte + connexion----------------------- */
 .formulaire {
     width: 100%;

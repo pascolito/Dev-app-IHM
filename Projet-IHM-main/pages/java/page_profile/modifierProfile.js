@@ -11,9 +11,6 @@ const input_pdp = document.getElementById("pdp");
 const input_mot_de_pass = document.getElementById("mot_de_passe");
 const input_mot_de_pass_conf = document.getElementById("mot_de_passe_conf");
 
-let comptes = [];
-let currentAccount = null;
-
 chargerComptes();
 chargerDefaultValue();
 
@@ -54,14 +51,10 @@ form.addEventListener("submit", function (event) {
     event.preventDefault();
 
     // Vérification mot de passe
-    if (
-        input_mot_de_pass.value.trim() !==
-        input_mot_de_pass_conf.value.trim()
-    ) {
-        alert("Les mots de passe ne correspondent pas");
+    if(input_mot_de_pass.value.trim() !== comptes[currentAccount].mot_de_pass){
+        alert("Mot de pass incorrect");
         return;
     }
-
     // Modification du compte connecté
     comptes[currentAccount].nom =
         input_Nom.value.trim();
@@ -73,10 +66,10 @@ form.addEventListener("submit", function (event) {
         input_mail.value.trim();
 
     // Modifier uniquement si rempli
-    if (input_mot_de_pass.value.trim() !== "") {
+    if (input_mot_de_pass_conf.value.trim() !== "") {
 
         comptes[currentAccount].mot_de_pass =
-            input_mot_de_pass.value.trim();
+            input_mot_de_pass_conf.value.trim();
     }
 
     sauvegarderComptes();
