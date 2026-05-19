@@ -37,8 +37,23 @@
   white-space: nowrap;
   align-self: flex-start;
 }
-.btn_suivre:hover,
-.btn_supprimer:hover {
+
+.btn_suivre_petit,
+.btn_supprimer_petit {
+  padding: 0.25rem 0.55rem;
+  margin-left: auto;
+  border-radius: var(--space-3);
+  font-size: 10px;
+  font-weight: 400;
+  cursor: pointer;
+  background: transparent;
+  border: 1.5px solid #1a1a1a;
+  color: var(--noir);
+  white-space: nowrap;
+  align-self: flex-end;
+}
+.btn_suivre_petit:hover,
+.btn_supprimer_petit:hover {
   background: #1a1a1a;
   color: #fff;
 }

@@ -74,6 +74,11 @@ form_inscription.addEventListener("submit", function (event) {
     });
     console.log("COMPTE CREER")
     sauvegarderComptes();
+    localStorage.setItem(
+        "connectedAccount",
+        JSON.stringify(id)
+    );
+    window.location.href = "/Projet-IHM-main/pages/html/file_d'actualite.html";
 });
 
 function chargerComptes() {

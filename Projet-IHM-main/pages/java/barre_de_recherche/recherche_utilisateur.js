@@ -2,12 +2,8 @@ const recherche = document.getElementById("recherche-utilisateur");
 const listeResultats = document.getElementById("liste-utilisateur-resultats");
 const totalUtilisateurs = document.getElementById("total-utilisateurs");
 
-let comptes = [];
 
-AfficherListeUtilisateurs();
-
-
-
+AfficherListeUtilisateurs(comptes);
 
 recherche.addEventListener("input", function () {
 
@@ -47,17 +43,32 @@ recherche.addEventListener("input", function () {
 
 
 
-function AfficherListeUtilisateurs() {
+function AfficherListeUtilisateurs(comptes) {
 
     const data = localStorage.getItem("account");
     if (data !== null) {
         comptes = JSON.parse(data);
     }
 
-    listeResultats.innerHTML = " ";
+    listeResultats.innerHTML = "";
+
     for (let i = 0; i < comptes.length; i++) {
-        li = document.createElement("li");
-        li.textContent = comptes[i].nom + " "+ comptes[i].prenom;
+
+        const li = document.createElement("li");
+        const  button = document.createElement('button');
+        button.innerText = 'Suivre';
+
+        button.classList.add("btn_suivre_petit");
+
+
+
+        li.textContent =
+            comptes[i].nom + " " +
+            comptes[i].prenom;
+
+        li.appendChild(button);
+
+
         listeResultats.appendChild(li);
     }
 }

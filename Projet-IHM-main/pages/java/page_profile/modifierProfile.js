@@ -1,20 +1,24 @@
+const form = document.getElementById("form-modification");
+
 const input_mail = document.getElementById("mail");
 
-//Inscription :
+// Inscription :
 const input_Nom = document.getElementById("nom");
 const input_Prenom = document.getElementById("prenom");
 
-const input_pdp = document.getElementById("pdp"); //Photo de Profil
+const input_pdp = document.getElementById("pdp");
 
 const input_mot_de_pass = document.getElementById("mot_de_passe");
 const input_mot_de_pass_conf = document.getElementById("mot_de_passe_conf");
 
-let currentAccount = 0;
+let comptes = [];
+let currentAccount = null;
 
 chargerComptes();
 chargerDefaultValue();
 
 function chargerComptes() {
+
     const data = localStorage.getItem("account");
     const data2 = localStorage.getItem("connectedAccount");
 
@@ -29,9 +33,6 @@ function chargerComptes() {
 
 function chargerDefaultValue() {
 
-    console.log(comptes);
-    console.log(currentAccount);
-
     if (comptes.length > 0 && comptes[currentAccount]) {
 
         input_Nom.value = comptes[currentAccount].nom;
@@ -40,3 +41,45 @@ function chargerDefaultValue() {
     }
 }
 
+function sauvegarderComptes() {
+
+    localStorage.setItem(
+        "account",
+        JSON.stringify(comptes)
+    );
+}
+
+form.addEventListener("submit", function (event) {
+
+    event.preventDefault();
+
+    // Vérification mot de passe
+    if (
+        input_mot_de_pass.value.trim() !==
+        input_mot_de_pass_conf.value.trim()
+    ) {
+        alert("Les mots de passe ne correspondent pas");
+        return;
+    }
+
+    // Modification du compte connecté
+    comptes[currentAccount].nom =
+        input_Nom.value.trim();
+
+    comptes[currentAccount].prenom =
+        input_Prenom.value.trim();
+
+    comptes[currentAccount].mail =
+        input_mail.value.trim();
+
+    // Modifier uniquement si rempli
+    if (input_mot_de_pass.value.trim() !== "") {
+
+        comptes[currentAccount].mot_de_pass =
+            input_mot_de_pass.value.trim();
+    }
+
+    sauvegarderComptes();
+
+    alert("Compte modifié !");
+});
