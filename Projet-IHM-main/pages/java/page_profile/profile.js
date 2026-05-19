@@ -10,8 +10,11 @@ let curState = State.info;
 
 updateAffichage();
 
-document.getElementById("onglet_information").addEventListener("submit", changeState(State.info));
-document.getElementById("modifier_publication").addEventListener("submit", changeState(State.publications));
+document.getElementById("onglet_information")
+    .addEventListener("click", () => changeState(State.info));
+
+document.getElementById("modifier_publication")
+    .addEventListener("click", () => changeState(State.publications));
 
 
 

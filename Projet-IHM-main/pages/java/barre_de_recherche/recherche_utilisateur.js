@@ -2,42 +2,62 @@ const recherche = document.getElementById("recherche-utilisateur");
 const listeResultats = document.getElementById("liste-utilisateur-resultats");
 const totalUtilisateurs = document.getElementById("total-utilisateurs");
 
+let comptes = [];
+
+AfficherListeUtilisateurs();
+
+
+
+
 recherche.addEventListener("input", function () {
 
     const texte = recherche.value.toLowerCase().trim();
 
-    const items = document.getElementById("liste-utilisateur-resultats").children;
+    const items = listeResultats.children;
 
     let compteur = 0;
 
 
     //si l'entrée est vide
     if (texte.trim() === "") {
-        listeResultats.innerHTML = "";
+        for (let i = 0; i < items.length; i++) {
+            items[i].style.display = "flex";
+        }
         totalUtilisateurs.textContent = 0;
         return;
     }
 
-    listeResultats.innerHTML = "";
+    for (let i = 0; i < items.length; i++) {
 
-    totalUtilisateurs.textContent = compteur;
+        const contenu = items[i].textContent.toLowerCase();
 
-   
-    let noResults = true;
-    for (i = 0; i < items.length; i++) { 
-        if (!items[i].innerHTML.toLowerCase().includes(texte) || input === "") {
-            items[i].style.display="none";
+        // Si le texte correspond
+        if (contenu.includes(texte)) {
+            items[i].style.display = "flex";
             compteur++;
-            continue;
         }
+
+        // Sinon on cache
         else {
-            items[i].style.display="block";
-            noResults = false;              
+            items[i].style.display = "none";
         }
     }
-    listContainer.style.display = noResults ? "none" : "block";
-
-
-
-
+    totalUtilisateurs.textContent = compteur;
 });
+
+
+
+function AfficherListeUtilisateurs() {
+
+    const data = localStorage.getItem("account");
+    if (data !== null) {
+        comptes = JSON.parse(data);
+    }
+
+    listeResultats.innerHTML = " ";
+    for (let i = 0; i < comptes.length; i++) {
+        li = document.createElement("li");
+        li.textContent = comptes[i].nom + " "+ comptes[i].prenom;
+        listeResultats.appendChild(li);
+    }
+}
