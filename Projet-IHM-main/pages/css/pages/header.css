@@ -1,38 +1,80 @@
- .header{
+.header {
     background: #e9e9e9;
- }
-.header_contenue{
+    width: 100%;
+    padding: 0.8rem 2rem;
+}
+
+/* CONTENEUR */
+.header_contenue {
     display: flex;
-    flex-direction: row;
     align-items: center;
+    justify-content: space-between;
+
+    width: 100%;
 }
 
-#form-post{
-    margin-left: 40%;
-    margin-right: auto;
+/* LOGO */
+.header_logo img {
+    width: 90px;
+    height: auto;
 }
 
-.header_user{
-    position: fixed;
-    right: -20%;
+/* BARRE RECHERCHE */
+#form-post {
+    flex: 1;
+
     display: flex;
-    flex-direction: row;
+    justify-content: center;
+
+    margin: 0 3rem;
+}
+
+.form-recherche {
+    width: 100%;
+    max-width: 400px;
+}
+
+.champ-recherche input {
+    width: 100%;
+
+    padding: 10px 15px;
+
+    border-radius: 10px;
+    border: 1px solid var(--color-border);
+
+    background: var(--color-surface);
+
+    color: var(--color-text);
+}
+
+.champ-recherche input:focus {
+    outline: none;
+    border-color: var(--color-primary);
+}
+
+/* PARTIE USER */
+.header_user {
+    display: flex;
     align-items: center;
+    gap: 1rem;
+
+    white-space: nowrap;
 }
 
-.header_logo{
-    width: 5%;
+/* IMAGE PROFIL */
+#headerPdp {
+    width: 60px;
+
+    border-radius: 50%;
+    object-fit: cover;
 }
 
-#nomprenom{
-    margin-right: 0;
+/* NOM */
+#nomprenom {
+    margin: 0;
 }
 
-#DECONEXION{
-    margin-left: 10px;
-    margin-right: 0px;
-}
-
-#headerPdp{
-    width: 10%;
+/* BOUTON */
+#DECONEXION {
+    margin: 0;
 }
