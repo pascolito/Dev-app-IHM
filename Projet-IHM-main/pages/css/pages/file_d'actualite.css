@@ -1,359 +1,486 @@
 .page_actualite {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between; /* ← pousse les extrémités aux bords */
-    align-items: flex-start;
-    width: 100%;
-    min-height: 100vh;
-    background-color: var(--color-texte);
-  }
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between; /* ← pousse les extrémités aux bords */
+  align-items: flex-start;
+  width: 100%;
+  min-height: 100vh;
+  background-color: var(--color-texte);
+}
 
 .extremite {
-    width: 25%;
-    display: flex;        
-    flex-direction: column;
-    gap: 2rem; 
-    padding : 2em;
-  }
-  .statistiques,
-  .quete {
-    display: flex;
-    flex-direction: column;
-  
-    gap: 0.75rem;
-  
-    padding: 0.75rem;
-  
-    background: var(--color-surface);
-  
-    border: 1px solid var(--color-border);
-    border-radius: 18px;
-  }
-  
-  /* Item */
-  .stat-item {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  
-    padding: 1rem 1.25rem;
-  
-    background: var(--color-surface-raised);
-  
-    border: 1px solid var(--color-border);
-    border-radius: 14px;
-  }
-  
-  /* Icône (SEULE utilisation de la couleur primaire) */
-  .stat-item i {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  
-    width: 40px;
-    height: 40px;
-  
-    font-size: 18px;
-  
-    color: var(--color-primary);
-  }
-  
-  /* Valeur */
-  .stat-value {
-    font-size: 1rem;
-    font-weight: 600;
-  
-    color: var(--color-text);
-  
-    min-width: 60px;
-    text-align: right;
-  }
-  
-  /* Label */
-  .stat-label {
-    font-size: 0.78rem;
-  
-    color: var(--color-text-muted);
-  
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-  }
-  /*------------------------------------------------------------Partie du mileu-----------------------------------------------------*/
-  .actualite_principale {
-    margin-top: 2em;
-  
-    display: flex;
-    flex-direction: column;
-  
-    width: 100%;
-  
-    background: var(--color-surface);
-  
-    border: 1px solid var(--color-border);
-    border-radius: 18px;
-  
-    overflow: hidden;
-  }
-  
-  /* ───── ONGLET ───── */
-  
-  .onglets {
-    display: flex;
-  
-    border-bottom: 1px solid var(--color-border);
-  }
-  
-  .onglet {
-    flex: 1;
-  
-    padding: 0.85rem;
-  
-    font-size: 1rem;
-    font-weight: 500;
-  
-    background: var(--color-surface);
-  
-    border: none;
-    border-bottom: 2px solid transparent;
-  
-    cursor: pointer;
-  }
-  
-  /* actif = seule utilisation du primaire */
-  .onglet.actif {
-    color: var(--color-primary);
-    border-bottom: 2px solid var(--color-primary);
-  }
-  
-  /* hover simple */
-  .onglet:not(.actif):hover {
-    background: var(--color-surface-raised);
-  }
-  
-  /* ───── CARTE ───── */
-  
-  .carte {
-    background: var(--color-surface);
-  
-    padding: 1rem 1.25rem;
-  
-    border-bottom: 1px solid var(--color-border);
-  
-    display: flex;
-    flex-direction: column;
-  
-    gap: 0.75rem;
-  }
-  
-  .carte_tag {
-    font-size: 12px;
-  
-    color: var(--color-text-muted);
-  }
-  
-  /* contenu */
-  .carte_contenu {
-    display: flex;
-    align-items: flex-start;
-  
-    gap: 0.75rem;
-  }
-  
-  /* avatar */
-  .avatar {
-    font-size: 2rem;
-  
-    color: var(--color-text);
-  }
-  
-  /* texte */
-  .carte_texte {
-    flex: 1;
-  
-    display: flex;
-    flex-direction: column;
-  
-    gap: 0.4rem;
-  }
-  
-  .carte_question {
-    font-size: 1rem;
-    font-weight: 600;
-  
-    color: var(--color-text);
-  }
-  
-  .carte_auteur {
-    font-size: 0.9rem;
-  
-    color: var(--color-text-muted);
-  }
-  
-  /* actions */
-  .carte_actions {
-    display: flex;
-    align-items: center;
-  
-    gap: 0.5rem;
-  
-    margin-top: 0.25rem;
-  }
-  
-  .icone_media {
-    font-size: 1.2rem;
-  
-    color: var(--color-text-muted);
-  
-    cursor: pointer;
-  }
-  
-  /* image */
-  .carte_image {
-    width: 160px;
-    height: 120px;
-  
-    background: var(--color-surface-raised);
-  
-    border: 1px solid var(--color-border);
-    border-radius: 8px;
-  
-    margin-top: 0.5rem;
-  }
-  
-  /* footer */
-  .carte_footer {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  
-    margin-top: 0.25rem;
-  }
-  
-  /* like = seule touche accent */
-  .like {
-    font-size: 1.4rem;
-  
-    color: var(--color-primary);
-  
-    cursor: pointer;
-  }
-  /*-----------------------------------------partie droite utilisateur ------------------------*/
-  .bloc-utilisateurs {
-    background: var(--color-surface);
-  
-    border: 1px solid var(--color-border);
-    border-radius: 18px;
-  
-    padding: 1.5rem;
-    max-width: 500px;
-  }
-  
-  /* Titre */
-  .titre-section {
-    font-size: 1.3rem;
-    font-weight: 700;
-  
-    color: var(--color-text);
-  
-    margin-bottom: 1rem;
-  
-    border-bottom: 2px solid var(--color-primary);
-    display: inline-block;
-    padding-bottom: 5px;
-  }
-  
-  /* Infos */
-  .infos-utilisateurs {
-    font-size: 0.95rem;
-  
-    color: var(--color-text);
-  
-    margin-bottom: 1rem;
-  }
-  
-  /* Barre */
-  .barre-recherche {
-    height: 2px;
-    width: 100%;
-  
-    background: var(--color-primary);
-  
-    margin: 1rem 0 1.5rem 0;
-  }
-  
-  /* Carte utilisateur */
-  .carte-utilisateur {
-    flex: 1 1 calc(50% - 10px);
-  
-    padding: 1rem;
-  
-    background: var(--color-surface-raised);
-  
-    border: 1px solid var(--color-border);
-    border-radius: 14px;
-  }
-  
-  /* Nouveau utilisateur */
-  .nouveau-utilisateur {
-    border: 1px dashed var(--color-primary);
-  
-    color: var(--color-primary);
-  
-    text-align: center;
-    font-weight: 600;
-  
-    cursor: pointer;
-  }
-  
-  /* Hover simple */
-  .nouveau-utilisateur:hover {
-    border-color: var(--color-primary);
-  }
-  
-  /* Recherche */
-  .form-recherche {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-  }
-  
-  .champ-recherche input {
-    width: 100%;
-  
-    padding: 10px;
-  
-    border-radius: 10px;
-    border: 1px solid var(--color-border);
-  
-    background: var(--color-surface);
-  
-    color: var(--color-text);
-  }
-  
-  .champ-recherche input:focus {
-    outline: none;
-    border-color: var(--color-primary);
-  }
-  
-  /* Résultats */
-  .resultats-recherche {
-    list-style: none;
-  
-    margin: 0;
-    padding: 0;
-  }
-  
-  .resultats-recherche li {
+  width: 25%;
+  display: flex;        
+  flex-direction: column;
+  gap: 2rem; 
+  padding : 2em;
+}
+.statistiques,
+.quete {
+  display: flex;
+  flex-direction: column;
 
-    display: flex;
-    align-items: center;
-    padding: 8px 12px;
-  
-    background: var(--color-surface-raised);
-  
-    border: 1px solid var(--color-border);
-  
-    cursor: pointer;
+  gap: 0.75rem;
 
-    
-  }
+  padding: 0.75rem;
+
+  background: var(--color-surface);
+
+  border: 1px solid var(--color-border);
+  border-radius: 18px;
+}
+
+/* Item */
+.stat-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 1rem 1.25rem;
+
+  background: var(--color-surface-raised);
+
+  border: 1px solid var(--color-border);
+  border-radius: 14px;
+}
+
+/* Icône (SEULE utilisation de la couleur primaire) */
+.stat-item i {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 40px;
+  height: 40px;
+
+  font-size: 18px;
+
+  color: var(--color-primary);
+}
+
+/* Valeur */
+.stat-value {
+  font-size: 1rem;
+  font-weight: 600;
+
+  color: var(--color-text);
+
+  min-width: 60px;
+  text-align: right;
+}
+
+/* Label */
+.stat-label {
+  font-size: 0.78rem;
+
+  color: var(--color-text-muted);
+
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+/*------------------------------------------------------------Partie du mileu-----------------------------------------------------*/
+.actualite_principale {
+  margin-top: 2em;
+
+  display: flex;
+  flex-direction: column;
+
+  flex: 1;
+  min-width: 0; /* évite le débordement flex */
+
+  background: var(--color-surface);
+
+  border: 1px solid var(--color-border);
+  border-radius: 18px;
+
+  overflow: hidden;
+}
+
+/* ───── ONGLET ───── */
+
+.onglets {
+  display: flex;
+
+  border-bottom: 1px solid var(--color-border);
+}
+
+.onglet {
+  flex: 1;
+
+  padding: 0.85rem;
+
+  font-size: 1rem;
+  font-weight: 500;
+
+  background: var(--color-surface);
+
+  border: none;
+  border-bottom: 2px solid transparent;
+
+  cursor: pointer;
+}
+
+/* actif = seule utilisation du primaire */
+.onglet.actif {
+  color: var(--color-primary);
+  border-bottom: 2px solid var(--color-primary);
+}
+
+/* hover simple */
+.onglet:not(.actif):hover {
+  background: var(--color-surface-raised);
+}
+
+/* ───── CARTE ─────
+
+.carte {
+  background: var(--color-surface);
+
+  padding: 1rem 1.25rem;
+
+  border-bottom: 1px solid var(--color-border);
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 0.75rem;
+}
+
+.carte_tag {
+  font-size: 12px;
+
+  color: var(--color-text-muted);
+}
+
+ contenu 
+.carte_contenu {
+  display: flex;
+  align-items: flex-start;
+
+  gap: 0.75rem;
+}
+
+ avatar 
+.avatar {
+  font-size: 2rem;
+
+  color: var(--color-text);
+}
+
+texte 
+.carte_texte {
+  flex: 1;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 0.4rem;
+}
+
+.carte_question {
+  font-size: 1rem;
+  font-weight: 600;
+
+  color: var(--color-text);
+}
+
+.carte_auteur {
+  font-size: 0.9rem;
+
+  color: var(--color-text-muted);
+}
+
+actions 
+.carte_actions {
+  display: flex;
+  align-items: center;
+
+  gap: 0.5rem;
+
+  margin-top: 0.25rem;
+}
+
+.icone_media {
+  font-size: 1.2rem;
+
+  color: var(--color-text-muted);
+
+  cursor: pointer;
+}
+
+ image 
+.carte_image {
+  width: 160px;
+  height: 120px;
+
+  background: var(--color-surface-raised);
+
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+
+  margin-top: 0.5rem;
+}
+
+ footer 
+.carte_footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  margin-top: 0.25rem;
+}
+
+ like = seule touche accent 
+.like {
+  font-size: 1.4rem;
+
+  color: var(--color-primary);
+
+  cursor: pointer;
+} */
+
+
+
+/*---------------------------------------------POSTS ------------------------------------------------------------*/
+.middle-panel {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0.5rem 0;
+}
+
+.post {
+  width: 100%;
+  max-width: 560px;
+  background: var(--color-surface-raised);
+  border: 1px solid var(--color-border);
+  border-radius: 14px;
+  padding: 10px;
+  margin: 8px 0;
+}
+
+.post .post-top {
+  display: flex;
+  align-items: center;
+  padding: 8px 10px;
+}
+
+.post .post-top .dp {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.post .post-top .dp > img {
+  width: 100%;
+  cursor: pointer;
+}
+
+.post .post-top .post-info {
+  margin-left: 10px;
+  font-weight: bold;
+}
+
+.post .post-top .post-info .name {
+  cursor: pointer;
+  font-size: 15px;
+  color: var(--color-text);
+}
+
+.post .post-top .post-info .time {
+  font-size: 12px;
+  cursor: pointer;
+  color: var(--color-text-muted);
+}
+
+.post .post-top i {
+  margin-left: auto;
+  cursor: pointer;
+  color: var(--color-text-muted);
+}
+
+.post .post-top > input {
+  height: 38px;
+  padding: 5px 14px;
+  border-radius: 25px;
+  outline: none;
+  border: 1px solid var(--color-border);
+  flex: 1;
+  background: var(--color-surface);
+  color: var(--color-text);
+  margin-left: 10px;
+}
+
+.post .post-top > input::placeholder {
+  color: var(--color-text-muted);
+}
+
+.post .post-top > input:focus {
+  border-color: var(--color-primary);
+}
+
+.post .post-content {
+  font-size: 15px;
+  font-weight: normal;
+  padding: 8px 10px;
+  color: var(--color-text);
+  line-height: 1.5;
+}
+
+.post .post-content > img {
+  width: 100%;
+  margin: 6px 0;
+  border-radius: 10px;
+}
+
+.post .post-bottom {
+  border-top: 1px solid var(--color-border);
+  display: flex;
+  justify-content: space-between;
+  padding: 4px 5px 0 5px;
+  margin-top: 4px;
+}
+
+.post .post-bottom .action {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 12px;
+  border-radius: 10px;
+  transition: background 0.2s ease;
+  cursor: pointer;
+  color: var(--color-text-muted);
+  font-size: 14px;
+}
+
+.post .post-bottom .action:hover {
+  background: var(--color-surface);
+  color: var(--color-text);
+}
+
+.post.create .post-bottom > .action {
+  color: var(--color-primary);
+}
+/*-----------------------------------------partie droite utilisateur ------------------------*/
+.bloc-utilisateurs {
+  background: var(--color-surface);
+
+  border: 1px solid var(--color-border);
+  border-radius: 18px;
+
+  padding: 1.5rem;
+  max-width: 500px;
+}
+
+/* Titre */
+.titre-section {
+  font-size: 1.3rem;
+  font-weight: 700;
+
+  color: var(--color-text);
+
+  margin-bottom: 1rem;
+
+  border-bottom: 2px solid var(--color-primary);
+  display: inline-block;
+  padding-bottom: 5px;
+}
+
+/* Infos */
+.infos-utilisateurs {
+  font-size: 0.95rem;
+
+  color: var(--color-text);
+
+  margin-bottom: 1rem;
+}
+
+/* Barre */
+.barre-recherche {
+  height: 2px;
+  width: 100%;
+
+  background: var(--color-primary);
+
+  margin: 1rem 0 1.5rem 0;
+}
+
+/* Carte utilisateur */
+.carte-utilisateur {
+  flex: 1 1 calc(50% - 10px);
+
+  padding: 1rem;
+
+  background: var(--color-surface-raised);
+
+  border: 1px solid var(--color-border);
+  border-radius: 14px;
+}
+
+/* Nouveau utilisateur */
+.nouveau-utilisateur {
+  border: 1px dashed var(--color-primary);
+
+  color: var(--color-primary);
+
+  text-align: center;
+  font-weight: 600;
+
+  cursor: pointer;
+}
+
+/* Hover simple */
+.nouveau-utilisateur:hover {
+  border-color: var(--color-primary);
+}
+
+/* Recherche */
+.form-recherche {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.champ-recherche input {
+  width: 100%;
+
+  padding: 10px;
+
+  border-radius: 10px;
+  border: 1px solid var(--color-border);
+
+  background: var(--color-surface);
+
+  color: var(--color-text);
+}
+
+.champ-recherche input:focus {
+  outline: none;
+  border-color: var(--color-primary);
+}
+
+/* Résultats */
+.resultats-recherche {
+  list-style: none;
+
+  margin: 0;
+  padding: 0;
+}
+
+.resultats-recherche li {
+
+  display: flex;
+  align-items: center;
+  padding: 8px 12px;
+
+  background: var(--color-surface-raised);
+
+  border: 1px solid var(--color-border);
+
+  cursor: pointer;
+
+  
+}
