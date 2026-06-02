@@ -2,6 +2,9 @@ const recherche = document.getElementById("recherche-utilisateur");
 const listeResultats = document.getElementById("liste-utilisateur-resultats");
 const totalUtilisateurs = document.getElementById("total-utilisateurs");
 
+let comptes_suivies = JSON.parse(localStorage.getItem("comptes_suivis")) || {};
+
+
 
 AfficherListeUtilisateurs(comptes);
 
@@ -52,23 +55,27 @@ function AfficherListeUtilisateurs(comptes) {
 
     listeResultats.innerHTML = "";
 
+    const suivis = comptes_suivies[currentAccount] || [];
+
     for (let i = 0; i < comptes.length; i++) {
 
         const li = document.createElement("li");
-        const  button = document.createElement('button');
-        button.innerText = 'Suivre';
 
+        const button = document.createElement("button");
+        button.value = comptes[i].id;
         button.classList.add("btn_suivre_petit");
 
-
+        if (suivis.includes(comptes[i].id)) {
+            button.innerText = "✓";
+        } else {
+            button.innerText = "Suivre";
+        }
 
         li.textContent =
             comptes[i].nom + " " +
-            comptes[i].prenom;
+            comptes[i].prenom + " ";
 
         li.appendChild(button);
-
-
         listeResultats.appendChild(li);
     }
 }

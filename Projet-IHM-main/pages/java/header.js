@@ -1,4 +1,5 @@
 const nomprenom = document.getElementById("nomprenom");
+const pdp = document.getElementById("headerPdp");
 
 let comptes = [];
 let currentAccount = 0;
@@ -21,6 +22,7 @@ function chargerComptes() {
 function afficherCompteCo() {
     if(currentAccount != null){
         nomprenom.textContent = comptes[currentAccount].nom + " " + comptes[currentAccount].prenom;
+        pdp.src = comptes[currentAccount].pdp;
     }
 }
 

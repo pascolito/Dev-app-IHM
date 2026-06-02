@@ -24,6 +24,28 @@
   color: #1a1a1a ;
 }
 
+.btn_neutre {
+  display: flex;
+  background-color: transparent;
+  font-style:normal;
+  font-size: 15px;
+  border-radius: var(--space-3);
+  color: var(--blanc);
+  width: auto;
+
+  padding: 0.5rem 1.1rem;  
+  margin: var(--space-3) auto;
+  cursor: pointer;
+
+font-weight: 500;
+color: var(--noir);
+white-space: nowrap;
+align-self: center;
+}
+.btn_neutre:hover{
+  color: #534040 ;
+}
+
 .btn_suivre,
 .btn_supprimer {
   padding: 0.5rem 1.1rem;
@@ -135,4 +157,10 @@ input[type="file"] {
     flex-direction: column;
     width: 100%;
     align-items: left;
+}
+
+#preview_pdp{
+  border-radius: 50%;
+  width: 500px;
+  height: auto;
 }

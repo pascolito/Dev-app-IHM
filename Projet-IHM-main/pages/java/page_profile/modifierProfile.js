@@ -6,6 +6,7 @@ const input_mail = document.getElementById("mail");
 const input_Nom = document.getElementById("nom");
 const input_Prenom = document.getElementById("prenom");
 
+const preview_pdp = document.getElementById("preview_pdp")
 const input_pdp = document.getElementById("pdp");
 
 const input_mot_de_pass = document.getElementById("mot_de_passe");
@@ -35,6 +36,7 @@ function chargerDefaultValue() {
         input_Nom.value = comptes[currentAccount].nom;
         input_Prenom.value = comptes[currentAccount].prenom;
         input_mail.value = comptes[currentAccount].mail;
+        preview_pdp.src = comptes[currentAccount].pdp;
     }
 }
 
@@ -46,12 +48,28 @@ function sauvegarderComptes() {
     );
 }
 
+input_pdp.addEventListener("change", function () {
+
+    if (this.files.length === 0) {
+        preview_pdp.src = "";
+        return;
+    }
+
+    const reader = new FileReader();
+
+    reader.onload = function (e) {
+        preview_pdp.src = e.target.result;
+    };
+
+    reader.readAsDataURL(this.files[0]);
+});
+
 form.addEventListener("submit", function (event) {
 
     event.preventDefault();
 
     // Vérification mot de passe
-    if(input_mot_de_pass.value.trim() !== comptes[currentAccount].mot_de_pass){
+    if (input_mot_de_pass.value.trim() !== comptes[currentAccount].mot_de_pass) {
         alert("Mot de pass incorrect");
         return;
     }
@@ -65,14 +83,39 @@ form.addEventListener("submit", function (event) {
     comptes[currentAccount].mail =
         input_mail.value.trim();
 
-    // Modifier uniquement si rempli
-    if (input_mot_de_pass_conf.value.trim() !== "") {
+        if (input_pdp.files.length > 0) {
+            const reader = new FileReader();
+        
+            reader.onload = function (e) {
+                const nvpdp = e.target.result;
+                comptes[currentAccount].pdp = nvpdp;
+        
+                // Modifier le mot de passe si renseigné
+                if (input_mot_de_pass_conf.value.trim() !== "") {
+                    comptes[currentAccount].mot_de_pass =
+                        input_mot_de_pass_conf.value.trim();
+                }
+        
+                sauvegarderComptes();
+                alert("Compte modifié !");
+            };
+        
+            reader.onerror = function () {
+                alert("Erreur lors de la lecture de l'image.");
+            };
+        
+            reader.readAsDataURL(input_pdp.files[0]);
+        } else {
+            // Pas d'image sélectionnée
+        
+            if (input_mot_de_pass_conf.value.trim() !== "") {
+                comptes[currentAccount].mot_de_pass =
+                    input_mot_de_pass_conf.value.trim();
+            }
+        
+            sauvegarderComptes();
+            alert("Compte modifié !");
 
-        comptes[currentAccount].mot_de_pass =
-            input_mot_de_pass_conf.value.trim();
-    }
-
-    sauvegarderComptes();
-
-    alert("Compte modifié !");
+        }
+        location.reload();
 });

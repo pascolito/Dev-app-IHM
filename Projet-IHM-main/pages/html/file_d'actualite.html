@@ -33,8 +33,7 @@
         <!-- PLACEHOLDER USER A REMPLIR DANS LE CSS-->
         <div class="header_user">
             <img src="/Projet-IHM-main/images/profile_vide.png" alt="pdp" id="headerPdp">
-
-            <p id="nomprenom"></p>
+            <button class="btn_neutre" id="nomprenom" onclick="window.location.href='/Projet-IHM-main/pages/html/profil/informations_profil/mon_profile.html';"></button>
 
             <button class="btn" id="DECONEXION">Déconnexion</button>
         </div>
@@ -80,11 +79,11 @@
                 </div>
                 <div class="stat-item">
                     <span class="stat-label">Abonnés</span>
-                    <span class="stat-value">1.8k</span>
+                    <span class="stat-value" id="nbabonee">1.8k</span>
                 </div>
                 <div class="stat-item">
                     <span class="stat-label">Suivis</span>
-                    <span class="stat-value">342</span>
+                    <span class="stat-value" id="nbsuivis">342</span>
 
                 </div>
             </div>
@@ -321,6 +320,10 @@
         </div>
 
         <script src="/Projet-IHM-main/pages/java/barre_de_recherche/recherche_utilisateur.js"></script>
+        <script src="/Projet-IHM-main/pages/java/utilisateur_suivis.js"></script>
+        <script src="/Projet-IHM-main/pages/java/statistiques.js"></script>
+
+        <script src="/Projet-IHM-main/pages/java/publication.js"></script>
 
         <script>
             fetch('/Projet-IHM-main/pages/html/footer.html')
