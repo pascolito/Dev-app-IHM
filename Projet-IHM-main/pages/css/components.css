@@ -148,6 +148,8 @@ input[type="file"] {
     align-items: center;
 }
 
+
+
 #preview_pdp{
     width: 50%;
 }
@@ -163,4 +165,13 @@ input[type="file"] {
   border-radius: 50%;
   width: 500px;
   height: auto;
+}
+
+#preview_pdp_petit {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  object-fit: cover;
+  vertical-align: middle;
+  margin-right: 8px;
 }

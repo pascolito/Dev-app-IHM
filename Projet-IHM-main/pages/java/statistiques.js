@@ -1,11 +1,28 @@
 
-const valabo = document.getElementById("nbsuivis");
+const valsuivis = document.getElementById("nbsuivis");
+const valabo = document.getElementById("nbabonee");
 
 
-updateAbonnes();
+updateSuivis(currentAccount);
+updateAbonnee(currentAccount);
 
-function updateAbonnes() {
-    let comptes_suivis = JSON.parse(localStorage.getItem("comptes_suivis")) || [];
+function updateSuivis(currentAccount) {
+    let comptes_suivis = JSON.parse(localStorage.getItem("comptes_suivis")) || {};
 
-    valabo.textContent = comptes_suivis[1].length;
+    valsuivis.textContent = comptes_suivis[currentAccount].length;
+}
+
+
+function updateAbonnee(currentAccount) {
+    let comptes_suivis = JSON.parse(localStorage.getItem("comptes_suivis")) || {};
+
+    let compteur = 0;
+
+    for (let key in comptes_suivis) {
+        if (comptes_suivis[key].includes(currentAccount)) {
+            compteur++;
+        }
+    }
+
+    valabo.textContent = compteur;
 }

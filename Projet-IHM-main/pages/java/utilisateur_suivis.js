@@ -2,22 +2,23 @@ const liste_utilisateur = document.getElementById("liste-utilisateur-resultats")
 
 let comptes_suivis = JSON.parse(localStorage.getItem("comptes_suivis")) || {};
 
-function chargerComptes() {
-    const data2 = localStorage.getItem("connectedAccount");
+// function chargerComptes() {
+//     const data2 = localStorage.getItem("connectedAccount");
 
-    if (data2 !== null) {
-        currentAccount = JSON.parse(data2);
-    }
+//     if (data2 !== null) {
+//         currentAccount = JSON.parse(data2);
+//     }
 
-    // Création du tableau de suivi si inexistant
-    if (!comptes_suivis[currentAccount]) {
-        comptes_suivis[currentAccount] = [];
-    }
-}
+//     // Création du tableau de suivi si inexistant
+//     if (!comptes_suivis[currentAccount]) {
+//         comptes_suivis[currentAccount] = [];
+//     }
+// }
 
 liste_utilisateur.addEventListener("click", function (event) {
-    updateAbonnes();
+    
     event.preventDefault();
+    
     if (event.target.tagName === "BUTTON") {
 
         const id = Number(event.target.value);
@@ -47,7 +48,8 @@ liste_utilisateur.addEventListener("click", function (event) {
             JSON.stringify(comptes_suivis)
         );
 
-        console.log(comptes_suivis);
+        //mets a jours les statistiques
+        updateSuivis(currentAccount);
     }
 });
 

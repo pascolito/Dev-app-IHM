@@ -478,9 +478,8 @@ actions
 
   background: var(--color-surface-raised);
 
-  border: 1px solid var(--color-border);
-
+  border: 1px solid var(--color-border) ;
+  border-radius:var(--space-2) ;
   cursor: pointer;
 
-  
 }
