@@ -54,23 +54,34 @@ function afficherPosts() {
 
                 <div class="post-bottom">
                     <div class="action">
-                        <button class="btnCommentaire" >
+                        <button class="btnCommentaire" data-id=${post.id}>
                             Commenter (${post.comments.length})
                         </button>
                     </div>
                 </div>
     
-                <div class="zoneCommentaire" style="display:none;">
-                    <textarea placeholder="Votre commentaire"></textarea>
-                    <button class="envoyerCommentaire">
-                        Envoyer
-                    </button>
-                </div>
+                
 
                     <div class="action">
                         <i class="fa fa-share"></i>
                         <span>Share</span>
                     </div>
+                </div>
+
+
+
+                <div class="zoneCommentaire" style="display:none; margin-top:10px;">
+
+                    <textarea
+                        placeholder="Votre commentaire..."
+                        rows="3"
+                        style="width:100%;"
+                    ></textarea>
+
+                    <button class="envoyerCommentaire" >
+                        Envoyer
+                    </button>
+
                 </div>
             </div>
         `;

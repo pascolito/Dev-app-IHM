@@ -24,7 +24,7 @@
   color: #1a1a1a ;
 }
 
-.btn_neutre {
+.btn_neutre,.envoyerCommentaire {
   display: flex;
   background-color: transparent;
   font-style:normal;
@@ -42,7 +42,7 @@ color: var(--noir);
 white-space: nowrap;
 align-self: center;
 }
-.btn_neutre:hover{
+.btn_neutre:hover,.envoyerCommentaire:hover{
   color: #534040 ;
 }
 

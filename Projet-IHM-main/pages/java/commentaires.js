@@ -1,23 +1,64 @@
 
-const commentaire = document.getElementById("commentaire");
-const btncommentaires = document.getElementById("btncommentaire");
-let post_publies = JSON.parse(localStorage.getItem("post")) || {};
+const listpost = JSON.parse(localStorage.getItem("post")) || {};
 
+
+//------------------------------------------------------------------------------------------ RIEN NE MARCHE--------------------------------------------------------------------------------------------
+//------------------------------------------------------------------------------------------ RIEN NE MARCHE--------------------------------------------------------------------------------------------
+
+//------------------------------------------------------------------------------------------ RIEN NE MARCHE--------------------------------------------------------------------------------------------
+
+//------------------------------------------------------------------------------------------ RIEN NE MARCHE--------------------------------------------------------------------------------------------
+
+//------------------------------------------------------------------------------------------ RIEN NE MARCHE--------------------------------------------------------------------------------------------
+
+
+//------------------------------------------------------------------------------------------ RIEN NE MARCHE--------------------------------------------------------------------------------------------
+
+//------------------------------------------------------------------------------------------ RIEN NE MARCHE--------------------------------------------------------------------------------------------
 
 document.addEventListener("click", function(event) {
 
-    if(event.target.classList.contains("btnCommentaire")) {
+    // Afficher / masquer la zone de commentaire
+
+    //élément qui a été cliqué, regarde ensuite la classe correspondante
+    if (event.target.classList.contains("btnCommentaire")) {
 
         const post = event.target.closest(".post");
+
+        //trouve la zone commentaire
         const zone = post.querySelector(".zoneCommentaire");
 
-        if(zone.style.display === "none") {
-            zone.style.display = "block";
-        } else {
-            zone.style.display = "none";
-        }
+        //change la valeur pour l'affichage ou le dé-affichage
+        zone.style.display =
+            zone.style.display === "block" ? "none" : "block";
+            
+    }
+
+    // Envoyer un commentaire
+    if (event.target.classList.contains("envoyerCommentaire")) {
+
+        const textarea = event.target.parentElement.querySelector("textarea");
+        const commentaire = textarea.value.trim();
+
+        if (commentaire === "") return;
+
+        const postId = event.target.dataset.id; // ✔ ICI
+
+        const postes = JSON.parse(localStorage.getItem("post")) || [];
+
+        postes.forEach(post => {
+            if (post.id == postId) {
+                post.comments.push(commentaire);
+            }
+        });
+
+        textarea.value="";
+        console.log(commentaire,postId);
     }
 
 });
-  
+
+function afficherCommentaire(){
+
+}
 
