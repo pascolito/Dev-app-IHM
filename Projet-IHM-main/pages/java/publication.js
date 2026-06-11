@@ -85,3 +85,13 @@ function sauvegarderPost() {
         JSON.stringify(postes)
     );
 }
+
+
+
+
+
+
+
+
+// rapport 
+// screen /techno utiliser 
