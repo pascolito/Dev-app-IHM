@@ -28,5 +28,5 @@ function afficherCompteCo() {
 
 function logout() {
     localStorage.removeItem("connectedAccount");
-    window.location.href = "/Projet-IHM-main/pages/html/page_accueil.html";
+    window.location.href = "/../pages/html/page_accueil.html";
 }
