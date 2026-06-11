@@ -47,7 +47,7 @@ function afficherPosts() {
                 <div class="post-bottom">
                     <div class="action">
                         <i class="far fa-thumbs-up"></i>
-                        <button id="btnlike"> 
+                        <button id="btnlike" data-id=${post.id}> 
                             Like (${post.like.length})
                         </button> 
                     </div>
