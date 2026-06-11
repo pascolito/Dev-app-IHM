@@ -39,5 +39,5 @@ btncommentaires.addEventListener("click", function (event) {
         listeResultats.appendChild(li);
     
 })
-  N 
+  
 

@@ -50,9 +50,11 @@ function afficherPosts() {
                         <span>Like (${post.like})</span>
                     </div>
 
-                    <div class="action">
-                        <i class="far fa-comment"></i>
-                        <span>Comment (${post.comments.length})</span>
+                    <div class="action"> 
+                    <i class="far fa-comment"></i>
+                         <button id="btncommentaires"> 
+                            Commenter (${post.comments.length})
+                        </button> 
                     </div>
 
                     <div class="action">
