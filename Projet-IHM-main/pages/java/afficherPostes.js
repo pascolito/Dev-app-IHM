@@ -2,6 +2,11 @@ const postsListe = document.getElementById("postsListe");
 
 afficherPosts();
 
+function refreshPosts() {
+    postsListe.innerHTML = "";
+    afficherPosts();
+}
+
 function afficherPosts() {
     const data = localStorage.getItem("post");
 
@@ -37,19 +42,18 @@ function afficherPosts() {
                 <div class="post-content">
                     ${post.text}
 
-                    ${
-                        post.img
-                            ? `<img src="${post.img}" alt="Image du post">`
-                            : ""
-                    }
+                    ${post.img
+                ? `<img src="${post.img}" alt="Image du post">`
+                : ""
+            }
                 </div>
 
                 <div class="post-bottom">
                     <div class="action">
                         <i class="far fa-thumbs-up"></i>
-                        <button id="btnlike" data-id=${post.id}> 
+                        <button class="btnlike" data-id="${post.id}">
                             Like (${post.like.length})
-                        </button> 
+                        </button>
                     </div>
 
                 <div class="post-bottom">
