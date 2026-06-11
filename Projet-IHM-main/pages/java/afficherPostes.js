@@ -47,7 +47,9 @@ function afficherPosts() {
                 <div class="post-bottom">
                     <div class="action">
                         <i class="far fa-thumbs-up"></i>
-                        <span>Like (${post.like.length})</span>
+                        <button id="btnlike"> 
+                            Like (${post.like.length})
+                        </button> 
                     </div>
 
                     <div class="action"> 
