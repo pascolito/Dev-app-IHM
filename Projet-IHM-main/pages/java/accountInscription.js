@@ -105,7 +105,7 @@ form_inscription.addEventListener("submit", function (event) {
             JSON.stringify(id)
         );
 
-        window.location.href = "/../pages/html/file_d'actualite.html";
+        window.location.href = "/Projet-IHM-main/pages/html/file_d'actualite.html";
     }
 
     // Si une image a été sélectionnée
