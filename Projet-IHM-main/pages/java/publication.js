@@ -20,7 +20,7 @@ form_post.addEventListener("submit", function (event) {
 
     const idUser = currentAccount;
     const text = input_text.value.trim();
-    const like = 0;
+    const like = [];
     const comments = [];
     const date = new Date().toLocaleDateString();
 
