@@ -26,7 +26,6 @@ document.getElementById("modifier_publication")
 
 function changeState(state) {
     curState = state;
-    console.log(curState);
     updateAffichage();
 }
 

@@ -1,12 +1,18 @@
 
-const valsuivis = document.getElementById("nbsuivis");
-const valabo = document.getElementById("nbabonee");
-const vallikes = document.getElementById("nblikes");
+const valsuivis      = document.getElementById("nbsuivis");
+const valabo         = document.getElementById("nbabonee");
+const vallikes       = document.getElementById("nblikes");
+const valnbPostlikes = document.getElementById("nbPostlikes");
+const valnbPost      = document.getElementById("nbPost");
 
+    
 
 updateSuivis(currentAccount);
 updateAbonnee(currentAccount);
+updateNbPostLikes(currentAccount);
 updateLikes(currentAccount);
+updatenbPost(currentAccount);
+
 
 function updateSuivis(currentAccount) {
     let comptes_suivis = JSON.parse(localStorage.getItem("comptes_suivis")) || {};
@@ -29,15 +35,37 @@ function updateAbonnee(currentAccount) {
     valabo.textContent = compteur;
 }
 
-function updateLikes(currentAccount) {
+function updateNbPostLikes(currentAccount) {
     let postes = JSON.parse(localStorage.getItem("post")) || {};
 
-    let compteur = 0;
     let tableauLike = []; 
     postes.forEach(post => {
         tableauLike.push(post.like)
     });
 
     const resultat = tableauLike.flat().filter(x => x === currentAccount);
-    vallikes.textContent = resultat.length;
+    valnbPostlikes.textContent = resultat.length;
+}
+
+
+function updateLikes(currentAccount) {
+    let postes = JSON.parse(localStorage.getItem("post")) || {};
+    let tableauLike = []; 
+    postes.forEach(post => {
+        if(post.idUser===currentAccount)
+        tableauLike.push(post.like);
+    });
+
+    vallikes.textContent = tableauLike.flat().length;
+}
+
+function updatenbPost(currentAccount) {
+    let postes = JSON.parse(localStorage.getItem("post")) || {};
+    let compteur = 0;
+    postes.forEach(post => {
+        if(post.idUser===currentAccount)
+            compteur++;
+        });
+
+    valnbPost.textContent = compteur;
 }

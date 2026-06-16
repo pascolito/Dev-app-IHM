@@ -35,7 +35,7 @@
             <button class="btn_neutre" id="nomprenom"
                 onclick="window.location.href='/Projet-IHM-main/pages/html/profil/informations_profil/mon_profile.html';"></button>
 
-            <button class="btn" id="DECONEXION" >Déconnexion</button>
+            <button class="btn" id="DECONEXION">Déconnexion</button>
         </div>
 
     </div>
@@ -58,6 +58,14 @@
                     <span class="stat-value" id="nblikes"></span>
                 </div>
                 <div class="stat-item">
+                    <span class="stat-label">Nombre de postes liké</span>
+                    <span class="stat-value" id="nbPostlikes"></span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-label">Nombre de publications</span>
+                    <span class="stat-value" id="nbPost"></span>
+                </div>
+                <div class="stat-item">
                     <span class="stat-label">Abonnés</span>
                     <span class="stat-value" id="nbabonee"></span>
                 </div>
@@ -76,8 +84,8 @@
 
             <!-- Onglets -->
             <div class="onglets">
-                <button class="btn" onclick="window.location.href='#';"> Pour toi</button>
-                <button class="btn" onclick="window.location.href='#';">Suivis</button>
+                <button class="btn" id="onglet_PourToi"> Pour toi</button>
+                <button class="btn" id="onglet_Suivis">Suivis</button>
             </div>
 
             <div class="middle-panel">
@@ -87,10 +95,11 @@
                             <div class="dp">
                                 <img src="" alt="">
                             </div>
-                            <textarea id="post-Text" type="text" placeholder="Qu'est ce qui vous passe par la tête?"></textarea>
+                            <textarea id="post-Text" type="text"
+                                placeholder="Qu'est ce qui vous passe par la tête?"></textarea>
                         </div>
-                        
-                        <img id="preview_post_pdp" src="" ><!-- Preview de la photo de profile  -->
+
+                        <img id="preview_post_pdp" src=""><!-- Preview de la photo de profile  -->
 
                         <div class="post-bottom">
                             <label class="champ" id="pdplabel">
@@ -106,11 +115,9 @@
                     </form>
                 </div>
 
-
                 <ul id="postsListe">
 
                 </ul>
-
             </div>
 
 
@@ -139,25 +146,27 @@
                 </form>
             </div>
         </div>
+    </div>
+    <!-- Fermeture de page_actualite -->
 
-        <script src="/Projet-IHM-main/pages/java/barre_de_recherche/recherche_post.js"></script>
-        <script src="/Projet-IHM-main/pages/java/barre_de_recherche/recherche_utilisateur.js"></script>
-        <script src="/Projet-IHM-main/pages/java/barre_de_recherche/utilisateur_suivis.js"></script>
-        <script src="/Projet-IHM-main/pages/java/statistiques/statistiques.js"></script>
+    <script src="/Projet-IHM-main/pages/java/barre_de_recherche/recherche_post.js"></script>
+    <script src="/Projet-IHM-main/pages/java/barre_de_recherche/recherche_utilisateur.js"></script>
+    <script src="/Projet-IHM-main/pages/java/barre_de_recherche/utilisateur_suivis.js"></script>
+    <script src="/Projet-IHM-main/pages/java/statistiques/statistiques.js"></script>
 
-        <script src="/Projet-IHM-main/pages/java/publications/publication.js"></script>
-        <script src="/Projet-IHM-main/pages/java/publications/like.js"></script>
-        <script src="/Projet-IHM-main/pages/java/publications/afficherPostes.js"></script>
+    <script src="/Projet-IHM-main/pages/java/publications/publication.js"></script>
+    <script src="/Projet-IHM-main/pages/java/publications/like.js"></script>
+    <script src="/Projet-IHM-main/pages/java/publications/afficherPostes.js"></script>
 
-        <script src="/Projet-IHM-main/pages/java/publications/commentaires.js"></script>
+    <script src="/Projet-IHM-main/pages/java/publications/commentaires.js"></script>
 
-        <script>
-            fetch('/Projet-IHM-main/pages/html/footer.html')
-                .then(response => response.text())
-                .then(data => {
-                    document.getElementById('footer').innerHTML = data;
-                });
-        </script>
+    <script>
+        fetch('/Projet-IHM-main/pages/html/footer.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('footer').innerHTML = data;
+            });
+    </script>
 </body>
 
 </html>
