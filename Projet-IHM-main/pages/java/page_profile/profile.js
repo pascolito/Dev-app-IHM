@@ -1,9 +1,12 @@
+
 const info = document.getElementById("information");
 const publications = document.getElementById("publication");
+const statistiques = document.getElementById("statistiques");
 
 const State = {
-	info: "info",
-	publications: "publications",
+    info: "info",
+    statistiques: "statistiques",
+    publications: "publications",
 }
 
 let curState = State.info;
@@ -13,26 +16,36 @@ updateAffichage();
 document.getElementById("onglet_information")
     .addEventListener("click", () => changeState(State.info));
 
+document.getElementById("onglet_statistique")
+    .addEventListener("click", () => changeState(State.statistiques));
+
 document.getElementById("modifier_publication")
     .addEventListener("click", () => changeState(State.publications));
 
 
 
-function changeState(state){
+function changeState(state) {
     curState = state;
     console.log(curState);
     updateAffichage();
 }
 
-function updateAffichage(){
-    switch(curState){
-        case "info":
+function updateAffichage() {
+    info.style.display = "none";
+    publications.style.display = "none";
+    statistiques.style.display = "none";
+
+    switch (curState) {
+        case State.info:
             info.style.display = "flex";
-            publications.style.display = "none";
             break;
-        case "publications":
-            info.style.display = "none";
-            publications.style.display = "flex";    
+
+        case State.publications:
+            publications.style.display = "flex";
+            break;
+
+        case State.statistiques:
+            statistiques.style.display = "flex";
             break;
     }
 }

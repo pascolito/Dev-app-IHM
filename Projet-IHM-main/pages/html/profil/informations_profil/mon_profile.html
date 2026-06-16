@@ -35,7 +35,8 @@
     <div class="header_user">
       <img src="/Projet-IHM-main/images/profile_vide.png" alt="pdp" id="headerPdp">
 
-      <button class="btn_neutre" id="nomprenom" onclick="window.location.href='/Projet-IHM-main/pages/html/profil/informations_profil/mon_profile.html';"></button>
+      <button class="btn_neutre" id="nomprenom"
+        onclick="window.location.href='/Projet-IHM-main/pages/html/profil/informations_profil/mon_profile.html';"></button>
 
       <button class="btn" id="DECONEXION">Déconnexion</button>
     </div>
@@ -46,10 +47,10 @@
 </header>
 
 <body>
-  
-<div id="retour">
-  <a href="/Projet-IHM-main/pages/html/file_d'actualite.html">← Retour file d'actualité</a>
-</div>
+
+  <div id="retour">
+    <a href="/Projet-IHM-main/pages/html/file_d'actualite.html">← Retour file d'actualité</a>
+  </div>
   <div id="button_onglet">
 
     <button class="btn" id="onglet_information">
@@ -103,7 +104,7 @@
       </div>
 
       <div id="publication">
-        <div class="carte">
+        <!-- <div class="carte">
           <p class="carte_tag">#Les autres postes</p>
           <div class="carte_contenu">
             <div class="avatar">🙂</div>
@@ -117,33 +118,35 @@
             <span class="like">❤️</span>
             <button class="btn_supprimer">Supprimer</button>
           </div>
-        </div>
+        </div> -->
       </div>
 
     </div>
     <!--PARTIE DE DROITE -->
-    <div id="right">
-      <div class="statistiques">
-        <h3>Statistiques</h3>
-        <div class="stat-item">
+    <div id="statistiques">
+      <div id="right">
+        <div class="statistiques">
+          <h3>Statistiques</h3>
+          <div class="stat-item">
             <span class="stat-label">Likes</span>
-            <span class="stat-value">4.2k</span>
-        </div>
-        <div class="stat-item">
+            <span class="stat-value" id="nblikes"></span>
+          </div>
+          <div class="stat-item">
             <span class="stat-label">Abonnés</span>
             <span class="stat-value" id="nbabonee"></span>
-        </div>
-        <div class="stat-item">
+          </div>
+          <div class="stat-item">
             <span class="stat-label">Suivis</span>
             <span class="stat-value" id="nbsuivis"></span>
 
+          </div>
         </div>
-    </div>
+      </div>
     </div>
   </div>
 
 
-<!--
+  <!--
   
   <script>
     fetch('/Projet-IHM-main/pages/html/footer.html')

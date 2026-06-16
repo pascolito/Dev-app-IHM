@@ -23,10 +23,12 @@ form_connexion.addEventListener("submit", function (event) {
 
     if (mail === "") {
         erreur.textContent = "Le mail est obligatoire.";
+        erreur.style.color = "red";
         return;
     }
     if (mot_de_pass === "") {
         erreur.textContent = "Le mot de passe est obligatoire.";
+        erreur.style.color = "red";
         return;
     }
 
@@ -49,9 +51,11 @@ form_connexion.addEventListener("submit", function (event) {
     }
     if(trv === false){
         erreur.textContent = "L'adresse mail n'as pas de compte associer";
+        erreur.style.color = "red";
     }
     else{
         erreur.textContent = "Mot de passe incorrect";
+        erreur.style.color = "red";
     }
     return;
 });

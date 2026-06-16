@@ -1,16 +1,15 @@
- // 1) Rcupration des champs du formulaire
 
 const erreur = document.getElementById("erreur");
-//formulaire inscription
 const form_post = document.getElementById("form-poste");
 
-//Inscription :
 const input_text = document.getElementById("post-Text");
 const input_img = document.getElementById("img"); //Image
 
+
+const preview_post_pdp = document.getElementById("preview_post_pdp");//pour la photo de post 
+
 let postes = [];
 
-console.log("salut");
 
 chargerPost();
 
@@ -32,6 +31,7 @@ form_post.addEventListener("submit", function (event) {
 
     // Fonction qui crée réellement le compte
     function creerPost(img) {
+        chargerPost();
         const id = postes.length;
     
         postes.push({
@@ -69,8 +69,26 @@ form_post.addEventListener("submit", function (event) {
         // Pas d'image sélectionnée
         creerPost(null);
     }
+
+    postes=[];
+    
 });
 
+input_img.addEventListener("change", function () {//pour la photo du post 
+
+    if (this.files.length === 0) {
+        preview_post_pdp.src = "";
+        return;
+    }
+
+    const reader = new FileReader();
+
+    reader.onload = function (e) {
+        preview_post_pdp.src = e.target.result;
+    };
+
+    reader.readAsDataURL(this.files[0]);
+});
 
 function chargerPost() {
     const data = localStorage.getItem("post");
@@ -89,9 +107,3 @@ function sauvegarderPost() {
 
 
 
-
-
-
-
-// rapport 
-// screen /techno utiliser 

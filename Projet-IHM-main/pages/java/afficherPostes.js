@@ -1,4 +1,5 @@
 const postsListe = document.getElementById("postsListe");
+// const postsListeCurrentAccount = document.getElementById("publication");
 
 afficherPosts();
 
@@ -54,7 +55,7 @@ function afficherPosts() {
             </div>
             
             <div class="action">
-                <button class="btn" data-id="${post.id}">
+                <button class="supprimerPost" data-id="${post.id}">
                     Supprimer le post
                 </button>
             </div>
@@ -73,3 +74,20 @@ function afficherPosts() {
         postsListe.appendChild(li);
     });
 }
+
+
+//supprimer Post
+document.addEventListener("click", function (event) {
+
+    if (!event.target.closest(".supprimerPost")) return;
+
+    let postes = JSON.parse(localStorage.getItem("post")) || [];
+    const postId = event.target.closest(".supprimerPost").dataset.id; 
+
+    postes = postes.filter(post => post.id !== Number(postId));
+    
+    localStorage.setItem("post", JSON.stringify(postes));
+    refreshPosts();
+        
+    }
+)   

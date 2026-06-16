@@ -49,26 +49,31 @@ form_inscription.addEventListener("submit", function (event) {
     // Validation
     if (nom === "") {
         erreur.textContent = "Le nom est obligatoire.";
+        erreur.style.color = "red";
         return;
     }
 
     if (prenom === "") {
         erreur.textContent = "Le prénom est obligatoire.";
+        erreur.style.color = "red";
         return;
     }
 
     if (mail === "") {
         erreur.textContent = "Le mail est obligatoire.";
+        erreur.style.color = "red";
         return;
     }
 
     if (mot_de_pass === "") {
         erreur.textContent = "Le mot de passe est obligatoire.";
+        erreur.style.color = "red";
         return;
     }
 
     if (mot_de_pass !== mot_de_pass_conf) {
         erreur.textContent = "Les mots de passe ne correspondent pas !";
+        erreur.style.color = "red";
         return;
     }
 
@@ -76,6 +81,7 @@ form_inscription.addEventListener("submit", function (event) {
     for (let i = 0; i < comptes.length; i++) {
         if (mail === comptes[i].mail) {
             erreur.textContent = "L'adresse email est déjà utilisée !";
+            erreur.style.color = "red";
             console.log("L'adresse email est déjà utilisée !");
             return;
         }
