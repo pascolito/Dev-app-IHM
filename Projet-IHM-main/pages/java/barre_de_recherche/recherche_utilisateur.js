@@ -81,8 +81,7 @@ function AfficherListeUtilisateurs(comptes) {
 
         const photo_profile = document.createElement("img");
         photo_profile.src = comptes[i].pdp;
-        photo_profile.setAttribute('id','preview_pdp_petit'); //ajout un ID a la nouvelle image
-        
+        photo_profile.classList.add("preview_pdp_petit");        
        
 
         //permet d'jouter les balises li pour afficher chaque utilisateur

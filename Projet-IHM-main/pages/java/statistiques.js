@@ -1,10 +1,12 @@
 
 const valsuivis = document.getElementById("nbsuivis");
 const valabo = document.getElementById("nbabonee");
+const vallikes = document.getElementById("nblikes");
 
 
 updateSuivis(currentAccount);
 updateAbonnee(currentAccount);
+updateLikes(currentAccount);
 
 function updateSuivis(currentAccount) {
     let comptes_suivis = JSON.parse(localStorage.getItem("comptes_suivis")) || {};
@@ -25,4 +27,17 @@ function updateAbonnee(currentAccount) {
     }
 
     valabo.textContent = compteur;
+}
+
+function updateLikes(currentAccount) {
+    let postes = JSON.parse(localStorage.getItem("post")) || {};
+
+    let compteur = 0;
+    let tableauLike = []; 
+    postes.forEach(post => {
+        tableauLike.push(post.like)
+    });
+
+    const resultat = tableauLike.flat().filter(x => x === currentAccount);
+    vallikes.textContent = resultat.length;
 }

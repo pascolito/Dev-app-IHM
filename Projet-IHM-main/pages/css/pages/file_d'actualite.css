@@ -355,7 +355,30 @@ actions
   color: var(--color-text-muted);
   font-size: 14px;
 }
-
+.post .post-bottom .action {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 12px;
+  border-radius: 10px;
+  transition: background 0.2s ease;
+  cursor: pointer;
+  color: var(--color-text-muted);
+  font-size: 14px;
+}
+.post .post-bottom .action:hover {
+  background: var(--color-surface);
+  color: var(--color-text);
+}
+.post .post-bottom .action button {
+  background: none;
+  border: none;
+  color: inherit;
+  font: inherit;
+  cursor: pointer;
+  padding: 0;
+  outline: none;
+}
 .post .post-bottom .action:hover {
   background: var(--color-surface);
   color: var(--color-text);
