@@ -7,7 +7,7 @@
 .page_accueil {
     display: flex;
     align-items: stretch;
-    height: calc(100vh - 100px); /* ajuste selon la hauteur du footer */
+    min-height: calc(100vh - 100px); /* ajuste selon la hauteur du footer */
 
 }
 /* ------------------Première partie de la page d'accueil------------------*/
@@ -39,8 +39,8 @@
 .milieu {
     width: 2px;
     background-color:var(--noir);
-    height: 80%;
-    margin: auto 0;
+    align-self: stretch;
+    margin: 60px 0;
 }
 
 /* ------------------Dernière partie de la page d'accueil------------------*/
