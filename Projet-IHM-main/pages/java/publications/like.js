@@ -19,3 +19,5 @@ document.getElementById("postsListe").addEventListener("click", function (event)
     sauvegarderPost();
     refreshPosts();
 });
+
+
