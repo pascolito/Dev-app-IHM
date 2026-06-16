@@ -20,7 +20,7 @@ function changeState(newState) {
     stat();
 }
 
-function stat(){
+function stat() {
     postsListe.innerHTML = "";
     switch (curStatePulbication) {
         case State.PourToi:
@@ -81,7 +81,7 @@ function afficherPostsPourToi() {
             </div>
             
             <div class="action">
-                <button class="supprimerPost" data-id="${post.id}">
+                <button class="supprimerPost" data-id="${post.id}" style="display: ${post.idUser === currentAccount ? 'block' : 'none'}">
                     Supprimer le post
                 </button>
             </div>
@@ -119,10 +119,10 @@ function afficherPostsSuivis() {
 
     postes.forEach(post => {
 
-        if(comptes_suivis[currentAccount] && comptes_suivis[currentAccount].includes(post.idUser)){
-        const li = document.createElement("li");
+        if (comptes_suivis[currentAccount] && comptes_suivis[currentAccount].includes(post.idUser)) {
+            const li = document.createElement("li");
 
-        li.innerHTML = `
+            li.innerHTML = `
     <div class="post" data-id="${post.id}">
         <div class="post-top">
             <div class="dp">
@@ -155,8 +155,8 @@ function afficherPostsSuivis() {
             </div>
             
             <div class="action">
-                <button class="supprimerPost" data-id="${post.id}">
-                    Supprimer le post
+                <button class="supprimerPost" data-id="${post.id}">  
+                  Supprimer le post
                 </button>
             </div>
         </div>
@@ -171,8 +171,8 @@ function afficherPostsSuivis() {
     </div>
 `;
 
-        postsListe.appendChild(li);
-    }
+            postsListe.appendChild(li);
+        }
     });
 }
 
