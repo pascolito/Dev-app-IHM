@@ -58,7 +58,7 @@ function afficherPosts() {
 
                 <div class="post-bottom">
                     <div class="action">
-                        <button class="btnCommentaire" data-id=${post.id}>
+                        <button class="btnCommentaire" data-id=${post.id}> 
                             Commenter (${post.comments.length})
                         </button>
                     </div>

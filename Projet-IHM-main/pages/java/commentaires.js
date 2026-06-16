@@ -1,7 +1,6 @@
 
 const listpost = JSON.parse(localStorage.getItem("post")) || {};
 
-
 //------------------------------------------------------------------------------------------ RIEN NE MARCHE--------------------------------------------------------------------------------------------
 //------------------------------------------------------------------------------------------ RIEN NE MARCHE--------------------------------------------------------------------------------------------
 
@@ -26,7 +25,7 @@ document.addEventListener("click", function(event) {
         const post = event.target.closest(".post");
 
         //trouve la zone commentaire
-        const zone = post.querySelector(".zoneCommentaire");
+        const zone = post.querySelector(".zoneCommentaire"); 
 
         //change la valeur pour l'affichage ou le dé-affichage
         zone.style.display =
@@ -42,7 +41,7 @@ document.addEventListener("click", function(event) {
 
         if (commentaire === "") return;
 
-        const postId = event.target.dataset.id; // ✔ ICI
+        const postId = event.target.dataset.id; 
 
         const postes = JSON.parse(localStorage.getItem("post")) || [];
 
