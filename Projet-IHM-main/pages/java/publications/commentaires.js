@@ -45,7 +45,7 @@ document.addEventListener("click", function(event) {
         location.reload();
 }});
 
-
+// Fonction pour afficher les commentaires d'un post
 function afficherCommentaire(postId, zone) {
 
     const postes = JSON.parse(localStorage.getItem("post")) || [];

@@ -22,13 +22,13 @@ document.getElementById("onglet_statistique")
 document.getElementById("modifier_publication")
     .addEventListener("click", () => changeState(State.publications));
 
-
-
+    
 function changeState(state) {
     curState = state;
     updateAffichage();
 }
 
+// Fonction pour mettre à jour l'affichage en fonction de l'état actuel
 function updateAffichage() {
     info.style.display = "none";
     publications.style.display = "none";

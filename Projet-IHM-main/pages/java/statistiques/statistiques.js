@@ -5,22 +5,20 @@ const vallikes       = document.getElementById("nblikes");
 const valnbPostlikes = document.getElementById("nbPostlikes");
 const valnbPost      = document.getElementById("nbPost");
 
-    
-
 updateSuivis(currentAccount);
 updateAbonnee(currentAccount);
 updateNbPostLikes(currentAccount);
 updateLikes(currentAccount);
 updatenbPost(currentAccount);
 
-
+// Fonction pour mettre à jour le nombre de comptes suivis
 function updateSuivis(currentAccount) {
     let comptes_suivis = JSON.parse(localStorage.getItem("comptes_suivis")) || {};
 
     valsuivis.textContent = comptes_suivis[currentAccount].length;
 }
 
-
+// Fonction pour mettre à jour le nombre d'abonnés
 function updateAbonnee(currentAccount) {
     let comptes_suivis = JSON.parse(localStorage.getItem("comptes_suivis")) || {};
 
@@ -35,6 +33,7 @@ function updateAbonnee(currentAccount) {
     valabo.textContent = compteur;
 }
 
+// fonction pour mettre à jour le nombre de postes likes par l'utilisateur
 function updateNbPostLikes(currentAccount) {
     let postes = JSON.parse(localStorage.getItem("post")) || {};
 
@@ -47,7 +46,7 @@ function updateNbPostLikes(currentAccount) {
     valnbPostlikes.textContent = resultat.length;
 }
 
-
+// fonction pour mettre à jour le nombre de likes sur les posts de l'utilisateur
 function updateLikes(currentAccount) {
     let postes = JSON.parse(localStorage.getItem("post")) || {};
     let tableauLike = []; 
@@ -59,6 +58,7 @@ function updateLikes(currentAccount) {
     vallikes.textContent = tableauLike.flat().length;
 }
 
+// fonction pour mettre à jour le nombre de postes de l'utilisateur
 function updatenbPost(currentAccount) {
     let postes = JSON.parse(localStorage.getItem("post")) || {};
     let compteur = 0;

@@ -1,4 +1,3 @@
-// 1) Rcupration des champs du formulaire
 
 const erreur = document.getElementById("erreur");
 //formulaire connexion
@@ -13,6 +12,7 @@ let comptes = [];
 chargerComptes();
 console.log("salut");
 
+// Gestion de l'envoi du formulaire
 form_connexion.addEventListener("submit", function (event) {
     console.log("BOUTON CLICKER")
     event.preventDefault();
@@ -59,6 +59,8 @@ form_connexion.addEventListener("submit", function (event) {
     }
     return;
 });
+
+// Fonction pour charger les comptes depuis le localStorage
 
 function chargerComptes() {
     const data = localStorage.getItem("account");

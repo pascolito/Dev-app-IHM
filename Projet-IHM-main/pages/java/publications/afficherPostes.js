@@ -15,10 +15,14 @@ document.getElementById("onglet_PourToi")
 document.getElementById("onglet_Suivis")
     .addEventListener("click", () => changeState(State.Suivis));
 
+
+// Fonction pour changer l'état de la publication
 function changeState(newState) {
     curStatePulbication = newState;
     stat();
 }
+
+// Fonction pour afficher les posts en fonction de l'état actuel
 
 function stat() {
     postsListe.innerHTML = "";
@@ -32,6 +36,7 @@ function stat() {
     }
 }
 
+// Fonction pour afficher les posts pour l'état "Pour Toi"
 function afficherPostsPourToi() {
     const data = localStorage.getItem("post");
 
@@ -100,6 +105,8 @@ function afficherPostsPourToi() {
         postsListe.appendChild(li);
     });
 }
+
+//fonction pour afficher les posts en fonction de l'état "Suivis"
 
 function afficherPostsSuivis() {
     const data = localStorage.getItem("post");
@@ -171,7 +178,7 @@ function afficherPostsSuivis() {
     });
 }
 
-
+// fonction pour rafraîchir la liste des posts
 function refreshPosts() {
     stat();
 }

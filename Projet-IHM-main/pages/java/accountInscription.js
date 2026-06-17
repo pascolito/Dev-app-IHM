@@ -1,5 +1,3 @@
-// 1) Rcupration des champs du formulaire
-
 const erreur = document.getElementById("erreur");
 //formulaire inscription
 const form_inscription = document.getElementById("form-inscription");
@@ -20,6 +18,7 @@ let comptes = [];
 chargerComptes();
 console.log("salut");
 
+// Gestion de l'aperçu de l'image sélectionnée
 input_pdp.addEventListener("change", function () {
 
     if (this.files.length === 0) {
@@ -36,6 +35,7 @@ input_pdp.addEventListener("change", function () {
     reader.readAsDataURL(this.files[0]);
 });
 
+// Gestion de l'envoi du formulaire
 form_inscription.addEventListener("submit", function (event) {
     console.log("BOUTON CLIQUÉ");
     event.preventDefault();
@@ -133,9 +133,9 @@ form_inscription.addEventListener("submit", function (event) {
         creerCompte(null);
     }
 });
-//
 
 
+// Fonction pour charger les comptes depuis le localStorage
 function chargerComptes() {
     const data = localStorage.getItem("account");
     if (data !== null) {
@@ -143,6 +143,7 @@ function chargerComptes() {
     }
 }
 
+// Fonction pour sauvegarder les comptes dans le localStorage
 function sauvegarderComptes() {
     localStorage.setItem(
         "account",

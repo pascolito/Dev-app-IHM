@@ -11,7 +11,6 @@ liste_utilisateur.addEventListener("click", function (event) {
 
         const id = Number(event.target.value);
 
-        // sécurité anti undefined
         if (!comptes_suivis[currentAccount]) {
             comptes_suivis[currentAccount] = [];
         }

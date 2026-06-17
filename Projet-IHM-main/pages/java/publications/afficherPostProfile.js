@@ -3,11 +3,13 @@ const postsListe = document.getElementById("postsListeCurrentAccount");
 
 afficherPosts();
 
+// fonction pour rafraîchir la liste des posts
 function refreshPosts() {
     postsListe.innerHTML = "";
     afficherPosts();
 }
 
+// fonction pour afficher les posts
 function afficherPosts() {
     const data = localStorage.getItem("post");
 

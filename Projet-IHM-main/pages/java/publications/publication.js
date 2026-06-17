@@ -13,6 +13,7 @@ let postes = [];
 
 chargerPost();
 
+// Gestion de l'envoi du formulaire
 form_post.addEventListener("submit", function (event) {
     console.log("BOUTON CLIQUÉ");
     event.preventDefault();
@@ -74,7 +75,8 @@ form_post.addEventListener("submit", function (event) {
     
 });
 
-input_img.addEventListener("change", function () {//pour la photo du post 
+// Gestion de l'aperçu de l'image sélectionnée
+input_img.addEventListener("change", function () {
 
     if (this.files.length === 0) {
         preview_post_pdp.src = "";
@@ -90,6 +92,7 @@ input_img.addEventListener("change", function () {//pour la photo du post
     reader.readAsDataURL(this.files[0]);
 });
 
+// Fonction pour charger les postes depuis le localStorage
 function chargerPost() {
     const data = localStorage.getItem("post");
     if (data !== null) {
@@ -97,6 +100,7 @@ function chargerPost() {
     }
 }
 
+// fonction pour sauvegarder les postes dans le localStorage
 function sauvegarderPost() {
     localStorage.setItem(
         "post",

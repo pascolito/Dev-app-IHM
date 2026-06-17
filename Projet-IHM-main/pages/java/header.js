@@ -9,6 +9,7 @@ afficherCompteCo();
 
 document.getElementById("DECONEXION").addEventListener("click", logout);
 
+// Fonction pour charger les comptes depuis le localStorage
 function chargerComptes() {
     const data = localStorage.getItem("account");
     const data2 = localStorage.getItem("connectedAccount");
@@ -18,7 +19,7 @@ function chargerComptes() {
     } 
 }
 
-
+// Fonction pour afficher le compte connecté
 function afficherCompteCo() {
     if(currentAccount != null){
         nomprenom.textContent = comptes[currentAccount].nom + " " + comptes[currentAccount].prenom;
@@ -26,6 +27,7 @@ function afficherCompteCo() {
     }
 }
 
+// Fonction pour se déconnecter
 function logout() {
     localStorage.removeItem("connectedAccount");
     window.location.href = "/Projet-IHM-main/pages/html/page_accueil.html";

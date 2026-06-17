@@ -45,7 +45,7 @@ recherche.addEventListener("input", function () {
 });
 
 
-
+//fonction pour afficher la liste des utilisateurs avec les boutons de suivi
 function AfficherListeUtilisateurs(comptes) {
 
     //extractin du contenu du localstorage de account

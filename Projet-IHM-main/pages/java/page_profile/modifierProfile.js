@@ -15,6 +15,7 @@ const input_mot_de_pass_conf = document.getElementById("mot_de_passe_conf");
 chargerComptes();
 chargerDefaultValue();
 
+// Fonction pour charger les comptes depuis le localStorage
 function chargerComptes() {
 
     const data = localStorage.getItem("account");
@@ -29,6 +30,7 @@ function chargerComptes() {
     }
 }
 
+// foncion pour charger les valeurs par défaut dans le formulaire de modification
 function chargerDefaultValue() {
 
     if (comptes.length > 0 && comptes[currentAccount]) {
@@ -40,6 +42,7 @@ function chargerDefaultValue() {
     }
 }
 
+// fonction pour sauvegarder les comptes dans le localStorage
 function sauvegarderComptes() {
 
     localStorage.setItem(
@@ -48,6 +51,7 @@ function sauvegarderComptes() {
     );
 }
 
+// foncion pour modifier le compte connecté
 input_pdp.addEventListener("change", function () {
 
     if (this.files.length === 0) {
