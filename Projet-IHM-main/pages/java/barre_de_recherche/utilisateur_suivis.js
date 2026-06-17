@@ -2,18 +2,6 @@ const liste_utilisateur = document.getElementById("liste-utilisateur-resultats")
 
 let comptes_suivis = JSON.parse(localStorage.getItem("comptes_suivis")) || {};
 
-// function chargerComptes() {
-//     const data2 = localStorage.getItem("connectedAccount");
-
-//     if (data2 !== null) {
-//         currentAccount = JSON.parse(data2);
-//     }
-
-//     // Création du tableau de suivi si inexistant
-//     if (!comptes_suivis[currentAccount]) {
-//         comptes_suivis[currentAccount] = [];
-//     }
-// }
 
 liste_utilisateur.addEventListener("click", function (event) {
     

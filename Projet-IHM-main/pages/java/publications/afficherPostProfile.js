@@ -58,7 +58,7 @@ function afficherPosts() {
             </div>
             
             <div class="action">
-                <button class="supprimerPost" data-id="${post.id}">
+                <button class="supprimerPost" data-id="${post.id}" ">
                     Supprimer le post
                 </button>
             </div>

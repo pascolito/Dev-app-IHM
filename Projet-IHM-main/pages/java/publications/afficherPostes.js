@@ -153,12 +153,7 @@ function afficherPostsSuivis() {
                     Commenter (${post.comments.length})
                 </button>
             </div>
-            
-            <div class="action">
-                <button class="supprimerPost" data-id="${post.id}">  
-                  Supprimer le post
-                </button>
-            </div>
+              
         </div>
 
         <div class="zoneCommentaire" style="display:none; margin-top:10px;">
