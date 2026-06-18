@@ -79,6 +79,11 @@ function afficherPosts() {
             postsListe.appendChild(li);
         }
     });
+    updateSuivis(currentAccount);
+    updateAbonnee(currentAccount);
+    updateNbPostLikes(currentAccount);
+    updateLikes(currentAccount);
+    updatenbPost(currentAccount);
 }
 
 

@@ -2,7 +2,7 @@ const liste_utilisateur = document.getElementById("liste-utilisateur-resultats")
 
 let comptes_suivis = JSON.parse(localStorage.getItem("comptes_suivis")) || {};
 
-
+//Permet de faire le total
 liste_utilisateur.addEventListener("click", function (event) {
     
     event.preventDefault();

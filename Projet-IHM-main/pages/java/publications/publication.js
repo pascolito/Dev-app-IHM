@@ -107,6 +107,7 @@ function sauvegarderPost() {
         JSON.stringify(postes)
     );
 }
+updatenbPost(currentAccount);
 
 
 

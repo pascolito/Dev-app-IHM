@@ -18,6 +18,8 @@ document.getElementById("postsListe").addEventListener("click", function (event)
 
     sauvegarderPost();
     refreshPosts();
+updateNbPostLikes(currentAccount);
+updateLikes(currentAccount);
 });
 
 

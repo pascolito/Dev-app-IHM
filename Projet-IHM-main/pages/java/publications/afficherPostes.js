@@ -176,6 +176,11 @@ function afficherPostsSuivis() {
             postsListe.appendChild(li);
         }
     });
+    updateSuivis(currentAccount);
+    updateAbonnee(currentAccount);
+    updateNbPostLikes(currentAccount);
+    updateLikes(currentAccount);
+    updatenbPost(currentAccount);   
 }
 
 // fonction pour rafraîchir la liste des posts
