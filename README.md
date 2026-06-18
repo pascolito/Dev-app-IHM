@@ -95,11 +95,13 @@ Projet-IHM-main/
 - Un navigateur moderne (Chrome, Firefox, Edge, Safari)
 
 ### Lancer le projet
+**Option 1 — Avec les fichier :**
+Ouvrir le fichier `page_accueil.html` 
 
-**Option 1 — Avec VS Code :**
+**Option 2 — Avec VS Code :**
 Installer l'extension **Live Server**, clic droit sur `page_accueil.html` → *Open with Live Server*
 
-**Option 2 — Ouvrir directement :**
+**Option 3 — Ouvrir directement :**
 Double-cliquer sur `Projet-IHM-main/pages/html/page_accueil.html`
 
 ---
