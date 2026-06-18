@@ -23,7 +23,7 @@ Un réseau social moderne qui met l'accent sur les interactions authentiques ent
 
 ### Publications
 - Créer des posts avec texte et image optionnelle
-- Fil d'actualité avec deux onglets : **Pour toi** et **Suivis**
+- Fil d'actualité 
 - Supprimer ses propres publications
 
 ### Interactions sociales
@@ -56,21 +56,6 @@ Un réseau social moderne qui met l'accent sur les interactions authentiques ent
 | **localStorage** | Persistance des données côté client |
 
 > Aucune dépendance externe — 100% vanilla.
-
----
-
-## Design System
-
-Le projet utilise un système de design cohérent basé sur des variables CSS :
-
-```css
---color-primary: #6B1A2B;    /* Bordeaux profond */
---color-bg: #F7F7F8;         /* Fond gris clair */
---color-surface: #FFFFFF;    /* Cartes et surfaces */
---color-text: #111827;       /* Texte principal */
-```
-
-**Layout :** Grille 3 colonnes (sidebar gauche, feed central, sidebar droite) avec mise en page responsive en flexbox.
 
 ---
 
@@ -108,21 +93,13 @@ Projet-IHM-main/
 
 ### Prérequis
 - Un navigateur moderne (Chrome, Firefox, Edge, Safari)
-- Un serveur web local (recommandé)
 
 ### Lancer le projet
 
-**Option 1 — Avec Python :**
-```bash
-cd Dev-app-IHM
-python -m http.server 8000
-```
-Puis ouvrir : `http://localhost:8000/Projet-IHM-main/pages/html/page_accueil.html`
-
-**Option 2 — Avec VS Code :**
+**Option 1 — Avec VS Code :**
 Installer l'extension **Live Server**, clic droit sur `page_accueil.html` → *Open with Live Server*
 
-**Option 3 — Ouvrir directement :**
+**Option 2 — Ouvrir directement :**
 Double-cliquer sur `Projet-IHM-main/pages/html/page_accueil.html`
 
 ---
