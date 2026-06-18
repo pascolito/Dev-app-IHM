@@ -1,3 +1,9 @@
+function getBasePath() {
+    const path = window.location.pathname;
+    const index = path.indexOf("Projet-IHM-main/");
+    if (index !== -1) return path.substring(0, index + "Projet-IHM-main/".length);
+    return "/Projet-IHM-main/";
+}
 
 const erreur = document.getElementById("erreur");
 const form_post = document.getElementById("form-poste");
@@ -49,7 +55,7 @@ form_post.addEventListener("submit", function (event) {
     
         sauvegarderPost();
     
-        window.location.href = "/Projet-IHM-main/pages/html/file_d'actualite.html";
+        window.location.href = getBasePath() + "pages/html/file_d'actualite.html";
     }
 
     // Si une image a été sélectionnée

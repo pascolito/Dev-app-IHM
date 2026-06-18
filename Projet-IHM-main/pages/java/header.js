@@ -1,3 +1,10 @@
+function getBasePath() {
+    const path = window.location.pathname;
+    const index = path.indexOf("Projet-IHM-main/");
+    if (index !== -1) return path.substring(0, index + "Projet-IHM-main/".length);
+    return "/Projet-IHM-main/";
+}
+
 const nomprenom = document.getElementById("nomprenom");
 const pdp = document.getElementById("headerPdp");
 
@@ -30,5 +37,5 @@ function afficherCompteCo() {
 // Fonction pour se déconnecter
 function logout() {
     localStorage.removeItem("connectedAccount");
-    window.location.href = "/Projet-IHM-main/pages/html/page_accueil.html";
+    window.location.href = getBasePath() + "pages/html/page_accueil.html";
 }

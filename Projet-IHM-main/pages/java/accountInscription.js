@@ -1,3 +1,10 @@
+function getBasePath() {
+    const path = window.location.pathname;
+    const index = path.indexOf("Projet-IHM-main/");
+    if (index !== -1) return path.substring(0, index + "Projet-IHM-main/".length);
+    return "/Projet-IHM-main/";
+}
+
 const erreur = document.getElementById("erreur");
 //formulaire inscription
 const form_inscription = document.getElementById("form-inscription");
@@ -111,7 +118,7 @@ form_inscription.addEventListener("submit", function (event) {
             JSON.stringify(id)
         );
 
-        window.location.href = "/Projet-IHM-main/pages/html/file_d'actualite.html";
+        window.location.href = getBasePath() + "pages/html/file_d'actualite.html";
     }
 
     // Si une image a été sélectionnée
